@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="darkmode" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书籍售卖商城</title>
+    <!--================= Favicon =================-->
+    <link rel="apple-touch-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
+    <!--================= Bootstrap V5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/bootstrap.min.css">
+    <!--================= Font Awesome 5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/all.min.css">
+    <!--================= RT Icons CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rt-icons.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/animate.min.css">
+    <!--================= Magnific popup Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/magnific-popup.css">
+    <!--================= Swiper Slider Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/swiper-bundle.min.css">
+    <!--================= Mobile Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/metisMenu.css">
+    <!--================= Main Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rtsmenu.css">
+    <!--================= Preloader CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/preloader.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/variables/variable6.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/main.css">
+</head>
+
+<body>
+<!--================= Preloader Section Start Here =================-->
+<div id="weiboo-load">
+    <div class="preloader-new">
+        <svg class="cart_preloader" role="img" aria-label="Shopping cart_preloader line animation"
+             viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                    <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"/>
+                    <circle cx="43" cy="111" r="13"/>
+                    <circle cx="102" cy="111" r="13"/>
+                </g>
+                <g class="cart__lines" stroke="currentColor">
+                    <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
+                              stroke-dasharray="338 338" stroke-dashoffset="-338"/>
+                    <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                        <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68"/>
+                    </g>
+                    <g class="cart__wheel2" transform="rotate(90,102,111)">
+                        <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68"/>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+</div>
+<!--================= Preloader End Here =================-->
+
+<div class="anywere"></div>
+
+<!--================= Header Section Start Here =================-->
+<header id="rtsHeader">
+    <div class="navbar-sticky">
+        <div class="container">
+            <div class="navbar-part navbar-part1">
+                <div class="navbar-inner">
+                    <div class="left-side">
+                        <a href="http://127.0.0.1:8000/index" class="logo"><img
+                                src="http://127.0.0.1:8000/assets/images/logo1.svg" alt="weiboo-logo"></a>
+                    </div>
+                    <div class="rts-menu">
+                        <nav class="menus menu-toggle">
+                            <ul class="nav__menu">
+                                <li class="has-dropdown"><a class="menu-item" href="http://127.0.0.1:8000/">首页 <i
+                                        class="rt-plus"></i></a>
+                                </li>
+                                <li class="has-dropdown"><a class="menu-item" href="#">全部分类 <i
+                                        class="rt-plus"></i></a>
+                                    <ul class="dropdown-ul mega-dropdown">
+                                        <li class="mega-dropdown-li">
+                                            <ul class="mega-dropdown-ul">
+                                                {% for category in book_category %}
+                                                    <li class="dropdown-li"><a class="dropdown-link2"
+                                                                               href="http://127.0.0.1:8000/catagory?id={{ category.id }}">{{ category.name }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown"><a class="menu-item active1"
+                                                            href="http://127.0.0.1:8000/account/">个人中心 <i
+                                        class="rt-plus"></i></a>
+                                </li>
+                                <li class="has-dropdown"><a class="menu-item" href="http://127.0.0.1:8000/logout/">注销账号
+                                    <i
+                                            class="rt-plus"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header-action-items header-action-items1">
+                        <div class="search-part">
+                            <div class="search-icon action-item icon"><i class="rt-search"></i></div>
+                            <div class="search-input-area">
+                                <div class="container">
+                                    <div class="search-input-inner">
+                                        <div class="input-div">
+                                            <form action="http://127.0.0.1:8000/search/" method="post">
+                                                <input id="searchInput1" class="search-input" type="text" name="search"
+                                                       placeholder="输入你想要搜索的内容，并按下回车搜索">
+                                            </form>
+                                        </div>
+                                        <div class="search-close-icon"><i class="rt-xmark"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://127.0.0.1:8000/account/" class="account"><i class="rt-user-2"></i></a>
+                        <div class="cart action-item">
+                            <div class="cart-nav">
+                                <div class="cart-icon icon"><a href="#0"><i aria-hidden="true"
+                                                                            class="fas fa-shopping-basket"></i></a><span
+                                        class="wishlist-dot icon-dot">{{ cart_count }}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bar">
+        <div class="cart-header">
+            <h3 class="cart-heading">我的购物车({{ cart_count }}个商品)</h3>
+            <div class="close-cart"><i class="fal fa-times"></i></div>
+        </div>
+        <div class="product-area">
+            {% for product in cart %}
+                <div class="product-item">
+                    <div class="product-detail">
+                        <div class="product-thumb"><img src="{{ product.cover }}"
+                                                        alt="product-thumb"></div>
+                        <div class="item-wrapper">
+                            <span class="product-name">{{ product.book }}</span>
+                            <div class="item-wrapper">
+                                <span class="product-qnty">{{ product.count }} ×</span>
+                                <span class="product-price">${{ product.price }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-edit">
+                        <div class="item-wrapper d-flex mr--5 align-items-center">
+                            <a href="http://127.0.0.1:8000/delcart?id={{ product.id }}" class="delete-cart"><i
+                                    class="fal fa-times"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="cart-bottom-area">
+            <span class="spend-shipping"><i class="fal fa-truck"></i> 需要 <span
+                    class="amount">$19.90</span> 作为运费</span>
+            <span class="total-price">总计: <span class="price">${{ cart_price }}</span></span>
+            <a href="http://127.0.0.1:8000/checkout/" class="checkout-btn cart-btn">去结账</a>
+        </div>
+    </div>
+    <div class="page-path">
+        <div class="container">
+            <div class="breadcrumbs-inner">
+                <h1 class="path-title">个人中心</h1>
+                <ul>
+                    <li><a class="home-page-link" href="http://127.0.0.1:8000">首页 <i
+                            class="fal fa-angle-right"></i></a></li>
+                    <li><a class="current-page" href="#">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!--================= Header Section End Here =================-->
+
+<div class="rts-account-section section-gap">
+    <div class="container">
+        <div class="account-inner">
+            <div class="account-side-navigation">
+                <button class="filter-btn active" data-show=".orders"><i class="fal fa-shopping-cart"></i> 我的订单
+                </button>
+                <button class="filter-btn" data-show=".like"><i class="fal fa-shopping-cart"></i> 我的收藏</button>
+                <button class="filter-btn" data-show=".address"><i class="fal fa-map-marker-alt"></i>
+                    我的地址
+                </button>
+                <button class="filter-btn" data-show=".accountdtls"><i class="fal fa-user"></i> 账户信息</button>
+                <button class="filter-btn" data-show=".newadd"><i class="fal fa-user"></i> 地址修改</button>
+                <button class="filter-btn" data-show=".code"><i class="fal fa-user"></i> 优惠兑换</button>
+                <a href="http://127.0.0.1:8000/logout/" class="filter-btn" data-show=".dashboard"><i
+                        class="fal fa-long-arrow-left"></i>
+                    退出登录</a>
+            </div>
+            <div class="account-main-area">
+                <div class="account-main orders filterd-items">
+                    <h2 class="mb--30">我的订单</h2>
+                    <table class="table">
+                        <thead>
+                        <tr class="top-tr">
+                            <th>订单号</th>
+                            <th>下单时间</th>
+                            <th>订单商品</th>
+                            <th>订单状态</th>
+                            <th>订单价格</th>
+                            <th>退货退款</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for order in orders %}
+                            <tr>
+                                <td>#{{ order.id }}</td>
+                                <td>{{ order.ordertime }}</td>
+                                <td>{{ order.book }}</td>
+                                <td>{{ order.status }}</td>
+                                <td>{{ order.price }}</td>
+                                <td><a href="http://127.0.0.1:8000/updateorder?id={{ order.id }}"
+                                       class="btn-small d-block">退货</a></td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="account-main like filterd-items hide">
+                    <h2 class="mb--30">我的收藏</h2>
+                    <table class="table">
+                        <thead>
+                        <tr class="top-tr">
+                            <th>书籍名称</th>
+                            <th>收藏日期</th>
+                            <th>删除收藏</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for like in likes %}
+                            <tr>
+                                <td>{{ like.book }}</td>
+                                <td>{{ like.time }}</td>
+                             <td><a href="http://127.0.0.1:8000/dellike?id={{ like.id }}"
+                                       class="btn-small d-block">删除</a></td>
+                            </tr>
+                        {% endfor %}
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="account-main address filterd-items hide">
+                    <h2 class="mb--30">我的地址</h2>
+                    <table class="table">
+                        <thead>
+                        <tr class="top-tr">
+                            <th>收货人</th>
+                            <th>手机号</th>
+                            <th>地址</th>
+                            <th>删除</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for aaddress in address %}
+                            <tr>
+                                <td>{{ aaddress.name }}</td>
+                                <td>{{ aaddress.phone }}</td>
+                                <td>{{ aaddress.address }}</td>
+                                <td><a href="http://127.0.0.1:8000/deleteaddress?id={{ aaddress.id }}"
+                                       class="btn-small d-block">删除</a></td>
+                            </tr>
+                        {% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="account-main accountdtls filterd-items hide">
+                    <div class="login-form">
+                        <div class="section-title">
+                            <h2>信息修改</h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="http://127.0.0.1:8000/updateaccount/" method="post">
+                                    <div class="form">
+                                        <input type="text" class="form-control" id="phone" name="phone"
+                                               placeholder="在这里修改手机号，您原先的手机号是{{ user.phone }}"
+                                               required="">
+                                    </div>
+                                    <div class="form">
+
+                                        <input type="text" class="form-control" id="email" name="email"
+                                               placeholder="在这里修改邮箱，您原先的邮箱号是{{ user.email }}"
+                                               required="">
+                                    </div>
+                                    <div class="form">
+                                        <input type="text" class="form-control" id="password" name="password"
+                                               placeholder="在这里修改密码" required="">
+                                    </div>
+                                    <div class="form">
+                                        <button type="submit" class="btn">修改信息 <i
+                                                class="fal fa-long-arrow-right"></i></button>
+                                    </div>
+                                </form>
+                                <br><a href="#" class="forget-password">&nbsp&nbsp&nbsp&nbsp&nbsp{{ message }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-main newadd filterd-items hide">
+                    <div class="login-form">
+                        <div class="section-title">
+                            <h2>增加地址</h2>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <form action="http://127.0.0.1:8000/addaddress/" method="post">
+                                    <div class="form">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               placeholder="收货人*" required="">
+                                    </div>
+                                    <div class="form">
+
+                                        <input type="text" class="form-control" id="phone" name="phone"
+                                               placeholder="收货号码*" required="">
+
+                                    </div>
+                                    <div class="form">
+                                        <input type="text" class="form-control" id="address" name="address"
+                                               placeholder="收货地址*" required="">
+                                    </div>
+                                    <div class="form">
+                                        <button type="submit" class="btn">增加地址 <i
+                                                class="fal fa-long-arrow-right"></i></button>
+                                    </div>
+                                    <a class="forgot-password" href="#">{{ message }}</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="account-main code filterd-items hide">
+                    <h2 class="mb--30">我的优惠券</h2>
+                    <form action="http://127.0.0.1:8000/exchange/" method="post">
+                        <div class="form">
+                            <input type="text" class="form-control" id="code" name="code"
+                                   placeholder="在这里输入优惠码" required="">
+                        </div>
+                        <div class="form">
+                            <button type="submit" class="btn">增加优惠券 <i class="fal fa-long-arrow-right"></i></button>
+                            <a class="forgot-password" href="#">{{ message }}</a>
+                        </div>
+                    </form>
+
+                    <table class="table">
+                        <thead>
+                        <tr class="top-tr">
+                            <th>优惠书籍</th>
+                            <th>优惠价格</th>
+                            <th>获取日期</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for coupon in coupons %}
+                            <tr>
+                                <td>{{ coupon.book }}</td>
+                                <td>${{ coupon.price }}</td>
+                                <td>{{ coupon.time }}</td>
+                            </tr>
+                        {% endfor %}
+
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="offer-ad mt--40"><img src="http://127.0.0.1:8000/assets/images/banner/while.jpg" alt="ad">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--================= Footer Start Here =================-->
+<div class="footer footer-1">
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                    <span class="copyright">Copyright & Design By <a href="http://127.0.0.1:8000" class="brand"
+                                                                     target="_blank">XXX</a> -2023</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================= Footer End Here =================-->
+
+
+<!--================= Scroll to Top Start =================-->
+<div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i
+        class="fas fa-circle-notch"></i></div>
+<!--================= Scroll to Top End =================-->
+
+<!--================= Jquery latest version =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery-3.6.0.min.js"></script>
+<!--================= Bootstrap latest version =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/bootstrap.min.js"></script>
+<!--================= Wow.js =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/wow.min.js"></script>
+<!--================= Swiper Slider =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/swiper-bundle.min.js"></script>
+<!--================= Nice Select =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery.nice-select.js"></script>
+<!--================= Swiper Slider =================-->
+
+<!--================= metisMenu Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/metisMenu.min.js"></script>
+<!--================= Main Menu Plugin =================-->
+
+<!--================= Magnefic Popup Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/isotope.pkgd.min.js"></script>
+<!--================= Magnefic Popup Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery.magnific-popup.min.js"></script>
+<!--================= Main Script =================-->
+<script src="http://127.0.0.1:8000/assets/js/main.js"></script>
+</body>
+
+</html>

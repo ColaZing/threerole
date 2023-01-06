@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="darkmode" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>书籍售卖商城</title>
+    <!--================= Favicon =================-->
+    <link rel="apple-touch-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
+    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
+    <!--================= Bootstrap V5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/bootstrap.min.css">
+    <!--================= Font Awesome 5 CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/all.min.css">
+    <!--================= RT Icons CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rt-icons.css">
+    <!--================= Animate css =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/animate.min.css">
+    <!--================= Magnific popup Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/magnific-popup.css">
+    <!--================= Swiper Slider Plugin =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/swiper-bundle.min.css">
+    <!--================= Mobile Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/metisMenu.css">
+    <!--================= Main Menu CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rtsmenu.css">
+    <!--================= Preloader CSS =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/preloader.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/variables/variable1.css">
+    <!--================= Main Stylesheet =================-->
+    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/main.css">
+</head>
+
+<body>
+<!--================= Preloader Section Start Here =================-->
+<div id="weiboo-load">
+    <div class="preloader-new">
+        <svg class="cart_preloader" role="img" aria-label="Shopping cart_preloader line animation"
+             viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
+                <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
+                    <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"/>
+                    <circle cx="43" cy="111" r="13"/>
+                    <circle cx="102" cy="111" r="13"/>
+                </g>
+                <g class="cart__lines" stroke="currentColor">
+                    <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
+                              stroke-dasharray="338 338" stroke-dashoffset="-338"/>
+                    <g class="cart__wheel1" transform="rotate(-90,43,111)">
+                        <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68"/>
+                    </g>
+                    <g class="cart__wheel2" transform="rotate(90,102,111)">
+                        <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68"
+                                stroke-dashoffset="81.68"/>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </div>
+</div>
+<!--================= Preloader End Here =================-->
+
+<div class="anywere anywere-home"></div>
+
+<!--================= Header Section Start Here =================-->
+<header id="rtsHeader">
+    <div class="navbar-sticky">
+        <div class="container">
+            <div class="navbar-part navbar-part1">
+                <div class="navbar-inner">
+                    <div class="left-side">
+                        <a href="http://127.0.0.1:8000/index" class="logo"><img
+                                src="http://127.0.0.1:8000/assets/images/logo1.svg" alt="weiboo-logo"></a>
+                    </div>
+                    <div class="rts-menu">
+                        <nav class="menus menu-toggle">
+                            <ul class="nav__menu">
+                                <li class="has-dropdown"><a class="menu-item active1" href="#">首页 <i
+                                        class="rt-plus"></i></a>
+                                </li>
+                                <li class="has-dropdown"><a class="menu-item" href="#">全部分类 <i
+                                        class="rt-plus"></i></a>
+                                    <ul class="dropdown-ul mega-dropdown">
+                                        <li class="mega-dropdown-li">
+                                            <ul class="mega-dropdown-ul">
+                                                {% for category in book_category %}
+                                                    <li class="dropdown-li"><a class="dropdown-link2"
+                                                                               href="http://127.0.0.1:8000/catagory?id={{ category.id }}">{{ category.name }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="has-dropdown"><a class="menu-item" href="http://127.0.0.1:8000/account/">个人中心 <i
+                                        class="rt-plus"></i></a>
+                                </li>
+                            <li class="has-dropdown"><a class="menu-item" href="http://127.0.0.1:8000/logout/">注销账号 <i
+                                        class="rt-plus"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="header-action-items header-action-items1">
+                        <div class="search-part">
+                            <div class="search-icon action-item icon"><i class="rt-search"></i></div>
+                            <div class="search-input-area">
+                                <div class="container">
+                                    <div class="search-input-inner">
+                                        <div class="input-div">
+                                            <form action="http://127.0.0.1:8000/search/" method="post">
+                                                <input id="searchInput1" class="search-input" type="text" name="search"
+                                                       placeholder="输入你想要搜索的内容，并按下回车搜索">
+                                            </form>
+                                        </div>
+                                        <div class="search-close-icon"><i class="rt-xmark"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://127.0.0.1:8000/account/" class="account"><i class="rt-user-2"></i></a>
+                        <div class="cart action-item">
+                            <div class="cart-nav">
+                                <div class="cart-icon icon"><a href="#0"><i aria-hidden="true"
+                                                                            class="fas fa-shopping-basket"></i></a><span
+                                        class="wishlist-dot icon-dot">{{ cart_count }}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-bar">
+        <div class="cart-header">
+            <h3 class="cart-heading">我的购物车({{ cart_count }}个商品)</h3>
+            <div class="close-cart"><i class="fal fa-times"></i></div>
+        </div>
+        <div class="product-area">
+            {% for product in cart %}
+            <div class="product-item">
+                <div class="product-detail">
+                    <div class="product-thumb"><img src="{{ product.cover }}"
+                                                    alt="product-thumb"></div>
+                    <div class="item-wrapper">
+                        <span class="product-name">{{ product.book }}</span>
+                        <div class="item-wrapper">
+                            <span class="product-qnty">{{ product.count }} ×</span>
+                            <span class="product-price">${{product.price}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-edit">
+                    <div class="item-wrapper d-flex mr--5 align-items-center">
+                        <a href="http://127.0.0.1:8000/delcart?id={{ product.id }}" class="delete-cart"><i class="fal fa-times"></i></a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="cart-bottom-area">
+                <span class="spend-shipping"><i class="fal fa-truck"></i> 需要 <span class="amount">$19.90</span> 作为运费</span>
+            <span class="total-price">总计: <span class="price">${{ cart_price }}</span></span>
+            <a href="http://127.0.0.1:8000/checkout/" class="checkout-btn cart-btn">去结账</a>
+        </div>
+    </div>
+    <!--================= Banner Section Start Here =================-->
+    <div class="banner banner-1 bg-image">
+        <div class="container">
+            <div class="banner-inner">
+                <div class="row">
+                    <div class="col-xl-2 col-md-4 col-sm-12 gutter-1">
+                        <div class="catagory-sidebar">
+                            <div class="widget-bg">
+                                <h2 class="widget-title">全部分类 <i class="rt-angle-down"></i></h2>
+                                <nav>
+                                    <ul>
+                                        {% for category in book_category %}
+                                        <li><a href="http://127.0.0.1:8000/catagory?id={{ category.id }}">{{ category.name }} <i class="rt rt-arrow-right-long"></i></a>
+                                        </li>
+                                        {% endfor %}
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-md-8 col-sm-12 gutter-2">
+                        <div class="swiper bannerSlide2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="banner-single bg-image bg-image-3-1" style="background-image: url('{{ banner.image1 }}');">
+                                        <div class="container">
+                                            <div class="single-inner">
+                                                <div class="content-box">
+                                                    <h2 class="slider-title"> 火热销售 <br> 商品</h2>
+                                                    <div class="slider-description">
+                                                        <p>简单易用的支付</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="banner-single bg-image bg-image-3-4" style="background-image: url('{{ banner.image2 }}');">
+                                        <div class="container">
+                                            <div class="single-inner">
+                                                <div class="content-box">
+                                                    <h2 class="slider-title"> 最受喜欢的 <br> 书籍</h2>
+                                                    <div class="slider-description">
+                                                        <p>快速便捷的售后</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-navigation">
+                                <div class="swiper-button-prev slider-btn prev"><i
+                                        class="rt rt-arrow-left-long"></i></div>
+                                <div class="swiper-button-next slider-btn next"><i
+                                        class="rt rt-arrow-right-long"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--================= Banner Section End Here =================-->
+</header>
+<!--================= Header Section End Here =================-->
+
+<!--================= Offer Section Start Here =================-->
+<div class="rts-offer-section">
+    <div class="container">
+        <div class="rts-offer-inner">
+            <p class="description">如果想要获取更多的优惠，请使用活动发放的 <a href="http://127.0.0.1:8000/account/">优惠码</a>
+            </p>
+        </div>
+    </div>
+</div>
+<!--================= Offer Section End Here =================-->
+
+<!--================= Hand Picked Section Start Here =================-->
+<div class="rts-hand-picked-products-section">
+    <div class="container">
+        <div class="section-header section-header3 text-center">
+            <div class="wrapper">
+                <div class="sub-content">
+                    <img class="line-1" src="http://127.0.0.1:8000/assets/images/banner/wvbo-icon.png" alt="">
+                    <span class="sub-text"> 开始购物吧！ </span>
+                    <img class="line-2" src="http://127.0.0.1:8000/assets/images/banner/wvbo-icon.png" alt="">
+                </div>
+                <h2 class="title">热门商品</h2>
+            </div>
+        </div>
+        <div class="slider-div">
+            <div class="swiper rts-sixSlide-over">
+                <div class="swiper-wrapper">
+                    {% for sbook in book %}
+                    <div class="swiper-slide">
+                        <div class="product-item element-item1">
+                            <a href="http://127.0.0.1:8000/detail?id={{ sbook.id }}" class="product-image image-hover-variations">
+                                <div class="image-vari1 image-vari"><img
+                                        src="{{ sbook.cover}}"
+                                        alt="product-image">
+                                </div>
+                                <div class="image-vari2 image-vari"><img
+                                        src="{{ sbook.cover}}"
+                                        alt="product-image">
+                                </div>
+                            </a>
+                            <div class="bottom-content">
+                                <a href="product-details.html" class="product-name">{{ sbook.name}}</a>
+                                <div class="action-wrap">
+                                    <span class="price">${{ sbook.price }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================= Hand Picked Section End Here =================-->
+
+<!--================= Posters Section Start Here =================-->
+<div class="rts-posters-section1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+                <a href="http://127.0.0.1:8000/account/" class="product-box product-box-medium product-box-medium5">
+                    <div class="contents">
+                        <span class="pretitle">立减 20% </span>
+                        <h1 class="product-title">全场可用 <br> BOOK123</h1>
+                        <div class="view-collections go-btn">立即兑换 <i class="rt-arrow-right-long"></i>
+                        </div>
+                    </div>
+                    <div class="product-thumb"><img src="http://127.0.0.1:8000/assets/images/featured/pot.png"
+                                                    alt="product-thumb">
+                    </div>
+                </a>
+            </div>
+            <div class="col-xl-6 col-lg-12 col-sm-12 col-12 last-child">
+                <a href="http://127.0.0.1:8000/account/" class="product-box product-box-medium mid">
+                    <div class="contents">
+                        <span class="pretitle">-45% off</span>
+                        <h1 class="product-title">兑换码 BOOK1234</h1>
+                        <p>不要错过！</p>
+                    </div>
+                    <div class="product-thumb product-thumb1"><img
+                            src="http://127.0.0.1:8000/assets/images/products/dress.png"
+                            alt="product-thumb"></div>
+                </a>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-sm-6 col-12">
+                <a href="#" class="product-box product-box-medium product-box-medium3">
+                    <div class="contents">
+                        <span class="pretitle">无理由退货</span>
+                        <h1 class="product-title">七天无理由退货</h1>
+                        <div class="view-collections go-btn">立刻购物 <i class="rt-arrow-right-long"></i></div>
+                    </div>
+                    <div class="product-thumb"><img src="http://127.0.0.1:8000/assets/images/featured/3rd-image.png"
+                                                    alt="product-thumb"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================= Posters Section End Here =================-->
+
+<!--================= Footer Start Here =================-->
+<div class="footer footer-1">
+
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-bottom-inner">
+                    <span class="copyright">Copyright & Design By <a href="http://127.0.0.1:8000" class="brand"
+                                                                     target="_blank">XXX</a> -2023</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================= Footer End Here =================-->
+
+
+<!--================= Scroll to Top Start =================-->
+<div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i
+        class="fas fa-circle-notch"></i></div>
+<!--================= Scroll to Top End =================-->
+
+<!--================= Jquery latest version =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery-3.6.0.min.js"></script>
+<!--================= Bootstrap latest version =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/bootstrap.min.js"></script>
+<!--================= Wow.js =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/wow.min.js"></script>
+<!--================= Swiper Slider =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/swiper-bundle.min.js"></script>
+<!--================= Nice Select =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery.nice-select.js"></script>
+<!--================= Zoom Plugin =================-->
+
+<!--================= metisMenu Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/metisMenu.min.js"></script>
+<!--================= Main Menu Plugin =================-->
+
+<!--================= Magnefic Popup Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/isotope.pkgd.min.js"></script>
+<!--================= Magnefic Popup Plugin =================-->
+<script src="http://127.0.0.1:8000/assets/js/vendors/jquery.magnific-popup.min.js"></script>
+<!--================= Main Script =================-->
+<script src="http://127.0.0.1:8000/assets/js/main.js"></script>
+</body>
+
+</html>
