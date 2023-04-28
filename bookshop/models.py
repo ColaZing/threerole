@@ -15,6 +15,16 @@ class User(models.Model):
         verbose_name = '用户管理'
         verbose_name_plural = verbose_name
 
+class SJUser(models.Model):
+    username = models.CharField(max_length=32, verbose_name='用户名')
+    password = models.CharField(max_length=32, verbose_name='密码')
+    email = models.EmailField(verbose_name='邮箱')
+    phone = models.CharField(max_length=11, verbose_name='手机号')
+    role = models.CharField(max_length=32, verbose_name='角色')
+
+    class Meta:
+        verbose_name = '用户管理'
+        verbose_name_plural = verbose_name
 
 # 水果表
 class Book(models.Model):

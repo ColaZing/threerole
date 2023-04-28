@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>药品商城</title>
+    <title>水果商城</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -41,7 +41,7 @@
                     <div class="col">
                         <div class="site-logo-wrap">
                             <div class="site-logo">
-                                <a href="http://127.0.0.1:8000/"><img src="http://127.0.0.1:8000/templates/assets/img/logo.png" alt="Logo"></a>
+                                <a href="http://127.0.0.1:8000/"><img src="" ></a>
                             </div>
                             <div class="get-support clearfix d-none">
                                 <div class="get-support-icon">
@@ -135,7 +135,7 @@
                     </div>
                     <div class="mini-cart-info">
                         <h6><a href="#">{{ book.book }}</a></h6>
-                        <span class="mini-cart-quantity">{{ book.count }} x ${{ book.price }}</span>
+                        <span class="mini-cart-quantity">{{ book.count }}Kg x {{ book.price }}元/Kg</span>
                     </div>
                     <div class="cart-edit">
                         <div class="item-wrapper d-flex mr--5 align-items-center">
@@ -148,7 +148,7 @@
             </div>
                         <div class="mini-cart-footer">
                 <div class="mini-cart-sub-total">
-                    <h5>总计: <span>${{ cart_price }}</span></h5>
+                    <h5>总计: <span>{{ cart_price }}元</span></h5>
                 </div>
                 <div class="btn-wrapper">
                     <a href="http://127.0.0.1:8000/checkout/" class="theme-btn-1 btn btn-effect-1">去结账</a>
@@ -177,9 +177,9 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-syringe"></i></span> 立刻领取优惠券</h6>
                                         <h1 class="slide-title animated ">全场通用 <br>立减20</h1>
-                                        <div class="btn-wrapper animated">
-                                            <a href="http://127.0.0.1:8000/youhui20/" class="theme-btn-1 btn btn-effect-1">立即领取</a>
-                                        </div>
+{#                                        <div class="btn-wrapper animated">#}
+{#                                            <a href="http://127.0.0.1:8000/youhui20/" class="theme-btn-1 btn btn-effect-1">立即领取</a>#}
+{#                                        </div>#}
                                     </div>
                                 </div>
                             </div>
@@ -197,9 +197,9 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-syringe"></i></span> 立刻领取优惠券</h6>
                                         <h1 class="slide-title animated ">全场通用 <br>立减40</h1>
-                                        <div class="btn-wrapper animated">
-                                            <a href="http://127.0.0.1:8000/youhui40/" class="theme-btn-1 btn btn-effect-1">立即领取</a>
-                                        </div>
+{#                                        <div class="btn-wrapper animated">#}
+{#                                            <a href="http://127.0.0.1:8000/youhui40/" class="theme-btn-1 btn btn-effect-1">立即领取</a>#}
+{#                                        </div>#}
                                     </div>
                                 </div>
                             </div>
@@ -217,9 +217,9 @@
                                     <div class="slide-item-info-inner ltn__slide-animation">
                                         <h6 class="slide-sub-title white-color--- animated"><span><i class="fas fa-syringe"></i></span> 立刻领取优惠券</h6>
                                         <h1 class="slide-title animated ">全场通用 <br>立减60</h1>
-                                        <div class="btn-wrapper animated">
-                                            <a href="http://127.0.0.1:8000/youhui60/" class="theme-btn-1 btn btn-effect-1">立即领取</a>
-                                        </div>
+{#                                        <div class="btn-wrapper animated">#}
+{#                                            <a href="http://127.0.0.1:8000/youhui60/" class="theme-btn-1 btn btn-effect-1">立即领取</a>#}
+{#                                        </div>#}
                                     </div>
                                 </div>
                             </div>
@@ -248,11 +248,22 @@
             </div>
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="row">
-
-                    </div>
+{#                        <div class="col-lg-12 col-sm-6">#}
+{#                            <div class="ltn__banner-item">#}
+{#                                <div class="ltn__banner-img">#}
+{#                                    <a href="http://127.0.0.1:8000/"><img src="http://127.0.0.1:8000/templates/assets/img/banner/11.jpg" alt="Banner Image"></a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-lg-12 col-sm-6">#}
+{#                            <div class="ltn__banner-item">#}
+{#                                <div class="ltn__banner-img">#}
+{#                                    <a href="http://127.0.0.1:8000/templates/assets/"><img src="http://127.0.0.1:8000/templates/assets/img/banner/12.jpg" alt="Banner Image"></a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-9" style="margin-left: -200px">
                     <div class="row ltn__tab-product-slider-one-active--- slick-arrow-1">
                         {% for sbook in book %}
                             <div class="col-lg-3--- col-md-4 col-sm-6 col-6">
@@ -291,7 +302,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="ltn__copyright-design clearfix">
-                            <p>All Rights Reserved @ qc <span class="current-year"></span></p>
+                            <p>All Rights Reserved @ XXX <span class="current-year"></span></p>
                         </div>
                     </div>
 

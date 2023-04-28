@@ -78,9 +78,10 @@ def register(request):
             # 写入session
             request.session['username'] = user.username
             book_category, book, cart_count, cart, cart_price, banner = nomal(username)
-            return render(request, 'index.html',
-                          {'user': user, 'book_category': book_category, 'book': book, 'cart_count': cart_count,
-                           'cart': cart, 'cart_price': cart_price, 'banner': banner})
+            if user.role == '用户':
+                return HttpResponseRedirect('/index/')
+            else:
+                return HttpResponseRedirect('/account/')
         except Exception as e:
             print(e)
             return render(request, 'register.html', {'messagereg': '注册失败'})

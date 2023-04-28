@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>药品商城</title>
+    <title>水果商城</title>
     <meta name="robots" content="noindex, follow"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +43,7 @@
                     <div class="col">
                         <div class="site-logo">
                             <a href="http://127.0.0.1:8000/"><img
-                                    src="http://127.0.0.1:8000/templates/assets/img/logo.png" alt="Logo"></a>
+                                    src="" ></a>
                         </div>
                     </div>
                     <div class="col header-contact-serarch-column d-none d-lg-block">
@@ -167,7 +167,7 @@
                         <div class="sticky-logo">
                             <div class="site-logo">
                                 <a href="http://127.0.0.1:8000/"><img
-                                        src="http://127.0.0.1:8000/templates/assets/img/logo-3.png" alt="Logo"></a>
+                                        src="" ></a>
                             </div>
                         </div>
                         <div class="header-menu header-menu-2">
@@ -218,14 +218,14 @@
                         </div>
                         <div class="mini-cart-info">
                             <h6><a href="#">{{ book.book }}</a></h6>
-                            <span class="mini-cart-quantity">{{ book.count }} x ${{ book.price }}</span>
+                            <span class="mini-cart-quantity">{{ book.count }}Kg x {{ book.price }}元/Kg</span>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="mini-cart-footer">
                 <div class="mini-cart-sub-total">
-                    <h5>总计: <span>${{ cart_price }}</span></h5>
+                    <h5>总计: <span>{{ cart_price }}元</span></h5>
                 </div>
                 <div class="btn-wrapper">
                     <a href="http://127.0.0.1:8000/checkout/" class="theme-btn-1 btn btn-effect-1">去结账</a>
@@ -327,25 +327,22 @@
                             <tbody>
                             {% for acart in cart %}
                                 <tr>
-                                    <td>{{ acart.book }} <strong>× {{ acart.count }}</strong></td>
-                                    <td>${{ acart.price }}</td>
+                                    <td>{{ acart.book }} <strong>× {{ acart.count }}Kg</strong></td>
+                                    <td>{{ acart.price }}元</td>
                                 </tr>
                             {% endfor %}
-                            <tr>
-                                <td><strong>总计：</strong></td>
-                                <td><strong>${{ cart_price }}</strong></td>
-                            </tr>
+
                             </tbody>
                         </table>
                         <table class="table">
                             <tbody>
+{#                            <tr>#}
+{#                                <td>优惠金额</td>#}
+{#                                <td>${{ coupon_price }}</td>#}
+{#                            </tr>#}
                             <tr>
-                                <td>优惠金额</td>
-                                <td>${{ coupon_price }}</td>
-                            </tr>
-                            <tr>
-                                <td><strong>优惠后总计：</strong></td>
-                                <td><strong>${{ price }}</strong></td>
+                                <td><strong>总计：</strong></td>
+                                <td><strong>{{ price }}元</strong></td>
                             </tr>
                             </tbody>
                         </table>
@@ -364,7 +361,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="ltn__copyright-design clearfix">
-                            <p>All Rights Reserved @ qc <span class="current-year"></span></p>
+                            <p>All Rights Reserved @ XXX <span class="current-year"></span></p>
                         </div>
                     </div>
                 </div>

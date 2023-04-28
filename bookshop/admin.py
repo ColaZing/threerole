@@ -8,20 +8,20 @@ from bookshop.models import User, Book, BookCategory, Cart, Order, Comment, Coll
 
 # Register your models here.
 # 注册用户表
-class UserResource(resources.ModelResource):
-    class Meta:
-        model = User
-        # export_order = ('id', 'username', 'password', 'email', 'phone')
+# class UserResource(resources.ModelResource):
+#     class Meta:
+#         model = User
+#         # export_order = ('id', 'username', 'password', 'email', 'phone')
+#
+#
+# class UserAdmin(ExportMixin, admin.ModelAdmin):
+#     resource_class = UserResource
+#
+#
+# admin.site.register(User, UserAdmin)
 
 
-class UserAdmin(ExportMixin, admin.ModelAdmin):
-    resource_class = UserResource
-
-
-admin.site.register(User, UserAdmin)
-
-
-# 注册药品表
+# 注册水果表
 class BookResource(resources.ModelResource):
     class Meta:
         model = Book
@@ -125,7 +125,7 @@ class CouponAdmin(ExportMixin, admin.ModelAdmin):
 admin.site.register(Coupon, CouponAdmin)
 
 
-# 注册药品分类表
+# 注册水果分类表
 class BookCategoryResource(resources.ModelResource):
     class Meta:
         model = BookCategory
@@ -149,6 +149,30 @@ class CouponCodeAdmin(ExportMixin, admin.ModelAdmin):
 
 
 admin.site.register(CouponCode, CouponCodeAdmin)
+
+
+class AdminUserRoleA(admin.ModelAdmin):
+    list_display = ('username', 'email', 'phone')
+    list_filter = ('role',)
+    search_fields = ('username', 'phone')
+
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        return queryset
+
+
+class AdminUserRoleB(admin.ModelAdmin):
+    list_display = ('username', 'email', 'phone')
+    list_filter = ('role',)
+    search_fields = ('username', 'phone')
+
+    def get_queryset(self, request):
+        queryset = super().get_queryset(request)
+        queryset = queryset.filter(role='批发商')  # 过滤出角色为 roleB 的用户
+        return queryset
+
+
+admin.site.register(User, AdminUserRoleA)
 
 
 

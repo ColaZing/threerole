@@ -16,7 +16,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterModelOptions(
             name='book',
-            options={'verbose_name': '药品管理', 'verbose_name_plural': '药品管理'},
+            options={'verbose_name': '水果管理', 'verbose_name_plural': '水果管理'},
         ),
         migrations.AlterModelOptions(
             name='bookcategory',

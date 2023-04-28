@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>药品商城</title>
+    <title>水果商城</title>
     <meta name="robots" content="noindex, follow"/>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,7 +43,7 @@
                     <div class="col">
                         <div class="site-logo">
                             <a href="http://127.0.0.1:8000/"><img
-                                    src="http://127.0.0.1:8000/templates/assets/img/logo.png" alt="Logo"></a>
+                                    src="" ></a>
                         </div>
                     </div>
                     <div class="col header-contact-serarch-column d-none d-lg-block">
@@ -135,7 +135,7 @@
                         <div class="sticky-logo">
                             <div class="site-logo">
                                 <a href="http://127.0.0.1:8000/"><img
-                                        src="http://127.0.0.1:8000/templates/assets/img/logo-3.png" alt="Logo"></a>
+                                        src="" ></a>
                             </div>
                         </div>
                         <div class="header-menu header-menu-2">
@@ -186,7 +186,7 @@
                         </div>
                         <div class="mini-cart-info">
                             <h6><a href="#">{{ book.book }}</a></h6>
-                            <span class="mini-cart-quantity">{{ book.count }} x ${{ book.price }}</span>
+                            <span class="mini-cart-quantity">{{ book.count }}Kg x {{ book.price }}元/Kg</span>
                         </div>
                         <div class="cart-edit">
                             <div class="item-wrapper d-flex mr--5 align-items-center">
@@ -199,7 +199,7 @@
             </div>
             <div class="mini-cart-footer">
                 <div class="mini-cart-sub-total">
-                    <h5>总计: <span>${{ cart_price }}</span></h5>
+                    <h5>总计: <span>￥{{ cart_price }}</span></h5>
                 </div>
                 <div class="btn-wrapper">
                     <a href="http://127.0.0.1:8000/checkout/" class="theme-btn-1 btn btn-effect-1">去结账</a>
@@ -259,7 +259,7 @@
                                 <div class="modal-product-info shop-details-info pl-0">
                                     <h3>{{ book.name }}</h3>
                                     <div class="product-price">
-                                        <span>${{ book.price }}</span>
+                                        <span>{{ book.price }}元/Kg</span>
                                     </div>
                                     <div class="modal-product-meta ltn__product-details-menu-1">
                                         <ul>
@@ -297,7 +297,7 @@
                                                     <input value="{{ book.id }}" name="id" hidden="hidden">
                                                     <label for="nums">下单数量：</label>
                                                     <input type="number" name="nums" id="nums" value="1" min="1"
-                                                           max="100">
+                                                           max="100">Kg
                                                     <br>
                                                     <br>
                                                     <button type="submit"
@@ -336,7 +336,7 @@
                         <div class="ltn__shop-details-tab-menu">
                             <div class="nav">
                                 <a class="active show" data-bs-toggle="tab"
-                                   href="http://127.0.0.1:8000/templates/assets/#liton_tab_details_1_1">药品描述</a>
+                                   href="http://127.0.0.1:8000/templates/assets/#liton_tab_details_1_1">水果描述</a>
                                 <a data-bs-toggle="tab"
                                    href="http://127.0.0.1:8000/templates/assets/#liton_tab_details_1_2"
                                    class="">评论</a>
@@ -345,7 +345,7 @@
                         <div class="tab-content">
                             <div class="tab-pane fade active show" id="liton_tab_details_1_1">
                                 <div class="ltn__shop-details-tab-content-inner">
-                                    <h4 class="title-2">药品详情.</h4>
+                                    <h4 class="title-2">水果详情.</h4>
                                     <p>{{ book.desc }}</p>
                                 </div>
                             </div>
@@ -406,7 +406,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="ltn__copyright-design clearfix">
-                            <p>All Rights Reserved @ qc <span class="current-year"></span></p>
+                            <p>All Rights Reserved @ XXX <span class="current-year"></span></p>
                         </div>
                     </div>
                 </div>
