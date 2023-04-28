@@ -21,7 +21,7 @@ class UserAdmin(ExportMixin, admin.ModelAdmin):
 admin.site.register(User, UserAdmin)
 
 
-# 注册书籍表
+# 注册药品表
 class BookResource(resources.ModelResource):
     class Meta:
         model = Book
@@ -74,42 +74,42 @@ admin.site.register(Comment, CommentAdmin)
 
 
 # 注册收藏表
-class CollectionResource(resources.ModelResource):
-    class Meta:
-        model = Collection
-
-
-class CollectionAdmin(ExportMixin, admin.ModelAdmin):
-    resource_classes = CollectionResource
-
-
-admin.site.register(Collection, CollectionAdmin)
+# class CollectionResource(resources.ModelResource):
+#     class Meta:
+#         model = Collection
+#
+#
+# class CollectionAdmin(ExportMixin, admin.ModelAdmin):
+#     resource_classes = CollectionResource
+#
+#
+# admin.site.register(Collection, CollectionAdmin)
 
 
 # 注册轮播图表
-class BannerResource(resources.ModelResource):
-    class Meta:
-        model = Banner
-
-
-class BannerAdmin(ExportMixin, admin.ModelAdmin):
-    resource_classes = BannerResource
-
-
-admin.site.register(Banner, BannerAdmin)
+# class BannerResource(resources.ModelResource):
+#     class Meta:
+#         model = Banner
+#
+#
+# class BannerAdmin(ExportMixin, admin.ModelAdmin):
+#     resource_classes = BannerResource
+#
+#
+# admin.site.register(Banner, BannerAdmin)
 
 
 # 注册收货地址表
-class AddressResource(resources.ModelResource):
-    class Meta:
-        model = Address
+# class AddressResource(resources.ModelResource):
+#     class Meta:
+#         model = Address
 
-
-class AddressAdmin(ExportMixin, admin.ModelAdmin):
-    resource_classes = AddressResource
-
-
-admin.site.register(Address, AddressAdmin)
+#
+# class AddressAdmin(ExportMixin, admin.ModelAdmin):
+#     resource_classes = AddressResource
+#
+#
+# admin.site.register(Address, AddressAdmin)
 
 
 # 注册优惠券表
@@ -125,7 +125,7 @@ class CouponAdmin(ExportMixin, admin.ModelAdmin):
 admin.site.register(Coupon, CouponAdmin)
 
 
-# 注册书籍分类表
+# 注册药品分类表
 class BookCategoryResource(resources.ModelResource):
     class Meta:
         model = BookCategory
@@ -149,3 +149,6 @@ class CouponCodeAdmin(ExportMixin, admin.ModelAdmin):
 
 
 admin.site.register(CouponCode, CouponCodeAdmin)
+
+
+

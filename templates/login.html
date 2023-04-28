@@ -1,235 +1,298 @@
-﻿<!DOCTYPE html>
-<html lang="en" class="darkmode" data-theme="light">
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>书籍商城--登陆注册</title>
-    <!--================= Favicon =================-->
-    <link rel="apple-touch-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
-    <link rel="shortcut icon" type="image/x-icon" href="http://127.0.0.1:8000/assets/images/fav.png">
-    <!--================= Bootstrap V5 CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/bootstrap.min.css">
-    <!--================= Font Awesome 5 CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/all.min.css">
-    <!--================= RT Icons CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rt-icons.css">
-    <!--================= Animate css =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/animate.min.css">
-    <!--================= Magnific popup Plugin =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/magnific-popup.css">
-    <!--================= Swiper Slider Plugin =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/swiper-bundle.min.css">
-    <!--================= Mobile Menu CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/metisMenu.css">
-    <!--================= Main Menu CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/rtsmenu.css">
-    <!--================= Preloader CSS =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/preloader.css">
-    <!--================= Main Stylesheet =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/variables/variable6.css">
-    <!--================= Main Stylesheet =================-->
-    <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/assets/css/main.css">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>药品商城</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.png in the root directory -->
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/templates/assets/img/favicon.png" type="image/x-icon" />
+    <!-- Font Icons css -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/templates/assets/css/font-icons.css">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/templates/assets/css/plugins.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/templates/assets/css/style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="http://127.0.0.1:8000/templates/assets/css/responsive.css">
 </head>
 
 <body>
-    <!--================= Preloader Section Start Here =================-->
-    <div id="weiboo-load">
-        <div class="preloader-new">
-            <svg class="cart_preloader" role="img" aria-label="Shopping cart_preloader line animation"
-                viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
-                <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="8">
-                    <g class="cart__track" stroke="hsla(0,10%,10%,0.1)">
-                        <polyline points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80" />
-                        <circle cx="43" cy="111" r="13" />
-                        <circle cx="102" cy="111" r="13" />
-                    </g>
-                    <g class="cart__lines" stroke="currentColor">
-                        <polyline class="cart__top" points="4,4 21,4 26,22 124,22 112,64 35,64 39,80 106,80"
-                            stroke-dasharray="338 338" stroke-dashoffset="-338" />
-                        <g class="cart__wheel1" transform="rotate(-90,43,111)">
-                            <circle class="cart__wheel-stroke" cx="43" cy="111" r="13" stroke-dasharray="81.68 81.68"
-                                stroke-dashoffset="81.68" />
-                        </g>
-                        <g class="cart__wheel2" transform="rotate(90,102,111)">
-                            <circle class="cart__wheel-stroke" cx="102" cy="111" r="13" stroke-dasharray="81.68 81.68"
-                                stroke-dashoffset="81.68" />
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </div>
-    </div>
-    <!--================= Preloader End Here =================-->
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://127.0.0.1:8000/templates/assets/https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
 
-    <div class="anywere"></div>
+    <!-- Add your site or application content here -->
 
-    <!--================= Header Section Start Here =================-->
-    <header id="rtsHeader">
-    <div class="navbar-sticky">
-        <div class="container">
-            <div class="navbar-part navbar-part1">
-                <div class="navbar-inner">
-                    <div class="left-side">
-                        <a href="http://127.0.0.1:8000/index/" class="logo"><img
-                                src="http://127.0.0.1:8000/assets/images/logo1.svg" alt="weiboo-logo"></a>
+<!-- Body main wrapper start -->
+<div class="body-wrapper">
+
+    <!-- HEADER AREA START (header-3) -->
+    <header class="ltn__header-area ltn__header-3">       
+
+        <!-- ltn__header-middle-area start -->
+        <div class="ltn__header-middle-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="site-logo">
+                            <a href="http://127.0.0.1:8000/"><img src="http://127.0.0.1:8000/templates/assets/img/logo.png" alt="Logo"></a>
+                        </div>
                     </div>
-                    <div class="rts-menu">
-                        <nav class="menus menu-toggle">
-                            <ul class="nav__menu">
-                                <li class="has-dropdown"><a class="menu-item" href="http://127.0.0.1:8000">首页 <i
-                                        class="rt-plus"></i></a>
+                    <div class="col header-contact-serarch-column d-none d-lg-block">
+                        <div class="header-contact-search">
+                            <!-- header-feature-item -->
+                            <div class="header-feature-item">
+                                <div class="header-feature-icon">
+                                    <i class="icon-call"></i>
+                                </div>
+                                <div class="header-feature-info">
+                                    <h6>Phone</h6>
+                                    <p><a href="http://127.0.0.1:8000/templates/assets/tel:0123456789">+0123-456-789</a></p>
+                                </div>
+                            </div>
+                            <!-- header-search-2 -->
+                            <div class="header-search-2">
+                                <form action="http://127.0.0.1:8000/search/" method="post">
+                                    <input id="searchInput1" class="search-input" type="text" name="search"
+                                           placeholder="输入你想要搜索的内容，并按下回车搜索">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <!-- header-options -->
+                        <div class="ltn__header-options">
+                            <ul>
+                                <li class="d-none">
+                                    <!-- ltn__currency-menu -->
+
                                 </li>
-                                <li class="has-dropdown"><a class="menu-item active1" href="http://127.0.0.1:8000/account/">个人中心 <i
-                                        class="rt-plus"></i></a>
+                                <li class="d-lg-none">
+                                    <!-- header-search-1 -->
+                                    <div class="header-search-wrap">
+                                        <div class="header-search-1">
+                                            <div class="search-icon">
+                                                <i class="icon-search  for-search-show"></i>
+                                                <i class="icon-cancel  for-search-close"></i>
+                                            </div>
+                                        </div>
+                                        <div class="header-search-1-form">
+                                            <form id="#" method="get"  action="#">
+                                                <input type="text" name="search" value="" placeholder="Search here..."/>
+                                                <button type="submit">
+                                                    <span><i class="icon-search"></i></span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="d-none---"> 
+                                    <!-- user-menu -->
+                                    <div class="ltn__drop-menu user-menu">
+                                        <ul>
+                                            <li>
+
+                                                <ul>
+
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <!-- mini-cart 2 -->
+                                    <div class="mini-cart-icon mini-cart-icon-2">
+                                        <a href="#ltn__utilize-cart-menu" class="ltn__utilize-toggle">
+                                            <span class="mini-cart-icon">
+                                                <i class="icon-shopping-cart"></i>
+
+                                            </span>
+                                            <h6><span>购物车</span> </h6>
+                                        </a>
+                                    </div>
                                 </li>
                             </ul>
-                        </nav>
-                    </div>
-
-                    <div class="header-action-items header-action-items1">
-
-                        <a href="http://127.0.0.1:8000/login/" class="account"><i class="rt-user-2"></i></a>
-
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <!-- ltn__header-middle-area end -->
+        <!-- header-bottom-area start -->
+        <div class="header-bottom-area ltn__border-top ltn__header-sticky  ltn__sticky-bg-white--- ltn__sticky-bg-secondary ltn__secondary-bg section-bg-1 menu-color-white d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col header-menu-column justify-content-center">
+                        <div class="sticky-logo">
+                            <div class="site-logo">
+                                <a href="http://127.0.0.1:8000/"><img src="http://127.0.0.1:8000/templates/assets/img/logo-3.png" alt="Logo"></a>
+                            </div>
+                        </div>
+                        <div class="header-menu header-menu-2">
+                            <nav>
+                                <div class="ltn__main-menu">
+                                    <ul>
+                                        <li><a href="http://127.0.0.1:8000/">首页</a>
+                                        </li>
+                                        <li class="menu-icon"><a href="#">全部分类</a>
+                                            <ul>
+                                                {% for category in book_category %}
+                                                    <li><a href="http://127.0.0.1:8000/catagory?id={{ category.id }}">{{ category.name }}</a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+
+                                        </li>
+                                        <li><a href="http://127.0.0.1:8000/account/">个人中心</a>
+                                        </li>
+                                        <li><a href="http://127.0.0.1:8000/logout/">注销账号</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header-bottom-area end -->
+    </header>
+    <!-- HEADER AREA END -->
+
+
+
+    <!-- Utilize Cart Menu Start -->
+    <div id="ltn__utilize-cart-menu" class="ltn__utilize ltn__utilize-cart-menu">
+        <div class="ltn__utilize-menu-inner ltn__scrollbar">
+            <div class="ltn__utilize-menu-head">
+                <span class="ltn__utilize-menu-title">购物车</span>
+                <button class="ltn__utilize-close">×</button>
+            </div>
+            <div class="mini-cart-product-area ltn__scrollbar">
+                {% for book in cart %}
+                    <div class="mini-cart-item clearfix">
+                    <div class="mini-cart-img">
+                        <a href="#"><img src="{{ book.cover }}" alt="Image"></a>
+
+                    </div>
+                    <div class="mini-cart-info">
+                        <h6><a href="#">{{ book.book }}</a></h6>
+                        <span class="mini-cart-quantity">{{ book.count }} x ${{ book.price }}</span>
+                    </div>
+                    <div class="cart-edit">
+                        <div class="item-wrapper d-flex mr--5 align-items-center">
+                            <a href="http://127.0.0.1:8000/delcart?id={{ book.id }}" class="delete-cart"><i
+                                    class="icon-cancel"></i>删除</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+                        <div class="mini-cart-footer">
+                <div class="mini-cart-sub-total">
+                    <h5>总计: <span>${{ cart_price }}</span></h5>
+                </div>
+                <div class="btn-wrapper">
+                    <a href="http://127.0.0.1:8000/checkout/" class="theme-btn-1 btn btn-effect-1">去结账</a>
+                </div>
+                <p>新店开业，活动多多</p>
+            </div>
+
         </div>
     </div>
+    <!-- Utilize Cart Menu End -->
 
-        <div class="page-path">
-            <div class="container">
-                <div class="breadcrumbs-inner">
-                    <h1 class="path-title">登录/注册</h1>
-                    <ul>
-                        <li><a class="home-page-link" href="http://127.0.0.1:8000/">首页 <i class="fal fa-angle-right"></i></a></li>
-                        <li><a class="current-page" href="#">登录/注册</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!--================= Header Section End Here =================-->
 
-    <!--login-area start-->
-    <div class="login-area">
+
+    <div class="ltn__utilize-overlay"></div>
+
+    <!-- BREADCRUMB AREA START -->
+    <div class="ltn__breadcrumb-area text-left bg-overlay-white-30 bg-image "  data-bs-bg="http://127.0.0.1:8000/templates/assets/img/bg/23.jpg">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-md-12 mr-10">
-                    <div class="login-form">
-                        <div class="section-title">
-                            <h2>登录</h2>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="http://127.0.0.1:8000/login/" method="post">
-                                    <div class="form">
-                                        <input type="text" class="form-control" id="username" name="username"
-                                            placeholder="请输入账号*" required />
-                                    </div>
-                                    <div class="form">
-
-                                        <div class="password-input">
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                placeholder="请输入密码*" required />
-                                        </div>
-                                    </div>
-                                    <div class="form">
-                                        <input type="checkbox" class="form-check-input" id="remember" />
-                                        <label for="remember" class="form-label">记住密码</label>
-                                    </div>
-                                    <div class="form">
-                                        <button type="submit" class="btn">登录</button>
-                                    </div>
-                                </form>
-                                <a href="#" class="forget-password">{{ messagelogin}}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12 ml-10">
-                    <div class="register-form">
-                        <div class="section-title">
-                            <h2>注册</h2>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <form action="http://127.0.0.1:8000/register/" method="post">
-                                    <div class="form">
-                                        <input type="text" class="form-control" id="username" name="username"
-                                            placeholder="注册你的用户名*" required />
-                                    </div>
-                                    <div class="form">
-
-                                        <input type="email" class="form-control" id="email" name="email"
-                                            placeholder="你的邮箱地址*" required />
-                                    </div>
-                                    <div class="form">
-
-                                        <input type="text" class="form-control" id="phone" name="phone"
-                                            placeholder="你的手机号*" required />
-                                    </div>
-                                    <div class="form">
-                                        <div class="password-input">
-                                            <input type="password" class="form-control" id="password" name="password"
-                                                placeholder="你的密码*" required />
-                                        </div>
-                                    </div>
-                                    <div class="form">
-                                        <button type="submit" class="btn">注册</button>
-                                    </div>
-                                </form>
-                                <a href="#" class="forget-password">{{ messagereg}}</a>
-                            </div>
+                <div class="col-lg-12">
+                    <div class="ltn__breadcrumb-inner">
+                        <h1 class="page-title">账号</h1>
+                        <div class="ltn__breadcrumb-list">
+                            <ul>
+                                <li><a href="http://127.0.0.1:8000/"><span class="ltn__secondary-color"><i class="fas fa-home"></i></span> 首页</a></li>
+                                <li>登录</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--login-area end-->
+    <!-- BREADCRUMB AREA END -->
 
-    <!--================= Footer Start Here =================-->
-    <div class="footer footer-1">
-
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="footer-bottom-inner">
-                    <span class="copyright">Copyright & Design By <a href="http://127.0.0.1:8000" class="brand"
-                            target="_blank">XXX</a> -2023</span>
+    <!-- LOGIN AREA START -->
+    <div class="ltn__login-area pb-65">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area text-center">
+                        <h1 class="section-title">登录</h1>
+                        <p>输入用户名和密码来登录</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="account-login-inner">
+                        <form action="http://127.0.0.1:8000/login/" class="ltn__form-box contact-form-box" method="post">
+                            <input type="text" id="username" name="username" placeholder="用户名*">
+                            <input type="password" id="password" name="password" placeholder="密码*">
+                            <div class="btn-wrapper mt-0">
+                                <button class="theme-btn-1 btn btn-block" type="submit">登录</button>
+                            </div>
+                        </form>
+                        <a href="#" class="forget-password">{{ messagelogin}}</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="account-create text-center pt-50">
+                        <h4>还没有账户?</h4>
+                        <p>立刻注册一个你的账号吧</p>
+                        <div class="btn-wrapper">
+                            <a href="http://127.0.0.1:8000/register/?role=用户" class="theme-btn-1 btn black-btn">成为用户</a>
+                            <a href="http://127.0.0.1:8000/register/?role=批发商" class="theme-btn-1 btn black-btn">成为批发商</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--================= Footer End Here =================-->
+    <!-- LOGIN AREA END -->
 
+    <!-- FOOTER AREA START -->
+    <footer class="ltn__footer-area  ">
+        <div class="ltn__copyright-area ltn__copyright-2 section-bg-7  plr--5">
+            <div class="container-fluid ltn__border-top-2">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="ltn__copyright-design clearfix">
+                            <p>All Rights Reserved @ qc <span class="current-year"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER AREA END -->
 
-    <!--================= Scroll to Top Start =================-->
-    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i
-            class="fas fa-circle-notch"></i></div>
-    <!--================= Scroll to Top End =================-->
+</div>
+<!-- Body main wrapper end -->
 
-    <!--================= Jquery latest version =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/jquery-3.6.0.min.js"></script>
-    <!--================= Bootstrap latest version =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/bootstrap.min.js"></script>
-    <!--================= Wow.js =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/wow.min.js"></script>
-    <!--================= Swiper Slider =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/swiper-bundle.min.js"></script>
-     <!--================= Nice Select =================-->
-     <script src="http://127.0.0.1:8000/assets/js/vendors/jquery.nice-select.js"></script>
-    <!--================= metisMenu Plugin =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/metisMenu.min.js"></script>
-    <!--================= Main Menu Plugin =================-->
-    
-    <!--================= Magnefic Popup Plugin =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/isotope.pkgd.min.js"></script>
-    <!--================= Magnefic Popup Plugin =================-->
-    <script src="http://127.0.0.1:8000/assets/js/vendors/jquery.magnific-popup.min.js"></script>
-    <!--================= Main Script =================-->
-    <script src="http://127.0.0.1:8000/assets/js/main.js"></script>
+    <!-- All JS Plugins -->
+    <script src="http://127.0.0.1:8000/templates/assets/js/plugins.js"></script>
+    <!-- Main JS -->
+    <script src="http://127.0.0.1:8000/templates/assets/js/main.js"></script>
+  
 </body>
-
 </html>
+

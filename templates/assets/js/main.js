@@ -1,1403 +1,2075 @@
-(function ($) {
+/*================================================
+[  Table of contents  ]
+================================================
+
+1. Variables
+2. Mobile Menu
+3. Mega Menu
+4. One Page Navigation
+5. Toogle Search
+6. Current Year Copyright area
+7. Background Image
+8. wow js init
+9. Tooltip
+10. Nice Select
+11. Default active and hover item active
+12. Product Details Page
+13. Isotope Gallery Active  ( Gallery / Portfolio )
+14. LightCase jQuery Active
+15. Slider One Active 
+16. Product Slider One
+17. Tab Product Slider One
+18. Blog Slider One
+19. Testimonial Slider - 1
+20. Testimonial Slider - 2
+21. Testimonial Slider - 3
+22. Category Slider
+23. Image Slide  - 1 (Screenshot) 
+24. Image Slide - 2
+25. Image Slide - 3
+26. Image Slide - 4 
+27. Brand Logo
+28. Blog Gallery (Blog Page )
+29. Countdown
+30. Counter Up
+31. Instagram Feed
+32. Price Slider
+33. Quantity plus minus
+34. scrollUp active
+35. Parallax active
+36. Header menu sticky
+
+
+
+======================================
+[ End table content ]
+======================================*/
+
+(function($) {
   "use strict";
-    // bootstrapÄ£°å¿â£ºhttp://www.bootstrapmb.com
-  //preloader
-  $(window).on('load', function () {
-    $("#rts__preloader").delay(0).fadeOut(1000);
-  })
-  $(window).on('load', function () {
-    $("#weiboo-load").delay(0).fadeOut(1000);
-  })
 
-  // Common-slider
-  var swiper = new Swiper(".rts-cmmnSlider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1200: {
-        slidesPerView: 4,
-      },
-      900: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      580: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-cmmnSlider-over", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 4,
-      },
-      1300: {
-        slidesPerView: 4,
-      },
-      1220: {
-        slidesPerView: 4,
-      },
-      1200: {
-        slidesPerView: 3,
-      },
-      900: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      633: {
-        slidesPerView: 2,
-      },
-      500: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-cmmnSlider-over2", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 5,
-      },
-      1300: {
-        slidesPerView: 5.6,
-      },
-      1220: {
-        slidesPerView: 5,
-      },
-      1200: {
-        slidesPerView: 4.5,
-      },
-      900: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      633: {
-        slidesPerView: 2,
-      },
-      500: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-fiveSlide", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 5,
-      },
-      1300: {
-        slidesPerView: 5,
-      },
-      1220: {
-        slidesPerView: 5,
-      },
-      1200: {
-        slidesPerView: 4,
-      },
-      900: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      633: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-sixSlide-over", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 5,
-      },
-      1300: {
-        slidesPerView: 5.6,
-      },
-      1220: {
-        slidesPerView: 5,
-      },
-      1200: {
-        slidesPerView: 4.5,
-      },
-      900: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      633: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-brandSlide1", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 6,
-      },
-      1300: {
-        slidesPerView: 6,
-      },
-      1220: {
-        slidesPerView: 5,
-      },
-      1200: {
-        slidesPerView: 5,
-      },
-      900: {
-        slidesPerView: 4,
-      },
-      768: {
-        slidesPerView: 3,
-      },
-      633: {
-        slidesPerView: 3,
-      },
-      500: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // Common-slider-over
-  var swiper = new Swiper(".rts-topSlide1", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1600: {
-        slidesPerView: 1,
-      },
-      1300: {
-        slidesPerView: 1,
-      },
-      1220: {
-        slidesPerView: 1,
-      },
-      1200: {
-        slidesPerView: 1,
-      },
-      900: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 1,
-      },
-      633: {
-        slidesPerView: 1,
-      },
-      500: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
+    jQuery(document).ready(function(){
+      
+        /* --------------------------------------------------------
+            1. Variables
+        --------------------------------------------------------- */
+        var $window = $(window),
+        $body = $('body');
 
+        /* --------------------------------------------------------
+            2. Mobile Menu
+        --------------------------------------------------------- */
+         /* ---------------------------------
+            Utilize Function 
+        ----------------------------------- */
+        (function () {
+            var $ltn__utilizeToggle = $('.ltn__utilize-toggle'),
+                $ltn__utilize = $('.ltn__utilize'),
+                $ltn__utilizeOverlay = $('.ltn__utilize-overlay'),
+                $mobileMenuToggle = $('.mobile-menu-toggle');
+            $ltn__utilizeToggle.on('click', function (e) {
+                e.preventDefault();
+                var $this = $(this),
+                    $target = $this.attr('href');
+                $body.addClass('ltn__utilize-open');
+                $($target).addClass('ltn__utilize-open');
+                $ltn__utilizeOverlay.fadeIn();
+                if ($this.parent().hasClass('mobile-menu-toggle')) {
+                    $this.addClass('close');
+                }
+            });
+            $('.ltn__utilize-close, .ltn__utilize-overlay').on('click', function (e) {
+                e.preventDefault();
+                $body.removeClass('ltn__utilize-open');
+                $ltn__utilize.removeClass('ltn__utilize-open');
+                $ltn__utilizeOverlay.fadeOut();
+                $mobileMenuToggle.find('a').removeClass('close');
+            });
+        })();
 
-  // feature-slider
-  var swiper = new Swiper(".rts-featureSlider", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1200: {
-        slidesPerView: 4,
-      },
-      1093: {
-        slidesPerView: 4,
-        spaceBetween: 0,
-      },
-      991: {
-        slidesPerView: 4,
-        spaceBetween: 10,
-      },
-      800: {
-        slidesPerView: 3,
-      },
-      575: {
-        slidesPerView: 2,
-        spaceBetween: 0,
+        /* ------------------------------------
+            Utilize Menu
+        ----------------------------------- */
+        function mobileltn__utilizeMenu() {
+            var $ltn__utilizeNav = $('.ltn__utilize-menu, .overlay-menu'),
+                $ltn__utilizeNavSubMenu = $ltn__utilizeNav.find('.sub-menu');
 
-      },
-      520: {
-        slidesPerView: 2,
-        spaceBetween: 10,
+            /*Add Toggle Button With Off Canvas Sub Menu*/
+            $ltn__utilizeNavSubMenu.parent().prepend('<span class="menu-expand"></span>');
 
-      },
-      0: {
-        slidesPerView: 1,
-        spaceBetween: 0,
-      }
-    },
-    autoplay: {
-      delay: 25000,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-  // three-slider
-  var swiper = new Swiper(".rts-threeSlider", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-
-    breakpoints: {
-      1500: {
-        slidesPerView: 3,
-      },
-      1200: {
-        slidesPerView: 3,
-      },
-      991: {
-        slidesPerView: 2,
-      },
-      880: {
-        slidesPerView: 2,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-
-  /* magnificPopup video view */
-  $('.popup-videos').magnificPopup({
-    type: 'iframe'
-  });
-
-  // One Group slider
-  var swiper = new Swiper(".rts-oneGroupSlider", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1500: {
-        slidesPerView: 1,
-      },
-      991: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true,
-    }
-  });
-
-  // banner slider
-  var swiper = new Swiper(".bannerSlide", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    speed: 700,
-    effect: 'fade',
-    loop: false,
-    loopFillGroupWithBlank: false,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    centeredSlides: false,
-    breakpoints: {
-      1500: {
-        slidesPerView: 1,
-      },
-      991: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
-  });
-  // banner slider
-  var swiper = new Swiper(".bannerSlide2", {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    speed: 700,
-    effect: 'fade',
-    loop: true,
-    loopFillGroupWithBlank: true,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false
-    },
-    centeredSlides: false,
-    breakpoints: {
-      1500: {
-        slidesPerView: 1,
-      },
-      991: {
-        slidesPerView: 1,
-      },
-      767: {
-        slidesPerView: 1,
-      },
-      575: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    }
-  });
-
-
-  var swiper = new Swiper(".oneSlide", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    slidesPerGroup: 1,
-    speed: 700,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pag",
-      clickable: true
-    }
-  });
-
-
-  // Testimonial slide
-  var menu = ['', '', '', '']
-  var swiper = new Swiper(".testimonialSlide", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    autoplay: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1500: {
-        slidesPerView: 1,
-      },
-      992: {
-        slidesPerView: 1,
-      },
-      991: {
-        slidesPerView: 1,
-      },
-      600: {
-        slidesPerView: 1,
-      },
-      450: {
-        slidesPerView: 1,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-      renderBullet: function (index, className) {
-        return '<span class="' + className + '">' + (menu[index]) + '</span>';
-      },
-    },
-  });
-
-  // No gap slide
-  var swiper = new Swiper(".noGapSlide", {
-    slidesPerView: 5,
-    spaceBetween: 10,
-    slidesPerGroup: 1,
-    speed: 1500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    breakpoints: {
-      1500: {
-        slidesPerView: 5,
-      },
-      992: {
-        slidesPerView: 4,
-      },
-      991: {
-        slidesPerView: 3,
-      },
-      600: {
-        slidesPerView: 3,
-      },
-      450: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 2,
-      }
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-
-  // productSlide
-  var swiper = new Swiper(".productSlide", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".button-next",
-      prevEl: ".button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-  // productSlide2
-  var swiper2 = new Swiper(".productSlide2", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".button-next2",
-      prevEl: ".button-prev2",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-  // productSlide3
-  var swiper3 = new Swiper(".productSlide3", {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    speed: 500,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".button-next3",
-      prevEl: ".button-prev3",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true
-    }
-  });
-
-
-  var swiperthumb = new Swiper(".productGallerySlideThumb", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-  var swiper = new Swiper(".productGallerySlide", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiperthumb,
-    },
-  });
-
-  var swiperthumb2 = new Swiper(".productGallerySlideThumb2", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-  });
-
-  var swiper2 = new Swiper(".productGallerySlide2", {
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiperthumb2,
-    },
-  });
-
-  //nice-select
-  $(document).ready(function () {
-    $('.filters-select').niceSelect();
-  });
-
-  // Video Popup
-  if ($(".play-video").length) {
-    $('.play-video').magnificPopup({
-      delegate: 'a',
-      type: 'iframe',
-      removalDelay: 0,
-      callbacks: {
-        beforeOpen: function () {
-          this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-          this.st.mainClass = this.st.el.attr('data-effect');
+            /*Category Sub Menu Toggle*/
+            $ltn__utilizeNav.on('click', 'li a, .menu-expand', function (e) {
+                var $this = $(this);
+                if ($this.attr('href') === '#' || $this.hasClass('menu-expand')) {
+                    e.preventDefault();
+                    if ($this.siblings('ul:visible').length) {
+                        $this.parent('li').removeClass('active');
+                        $this.siblings('ul').slideUp();
+                        $this.parent('li').find('li').removeClass('active');
+                        $this.parent('li').find('ul:visible').slideUp();
+                    } else {
+                        $this.parent('li').addClass('active');
+                        $this.closest('li').siblings('li').removeClass('active').find('li').removeClass('active');
+                        $this.closest('li').siblings('li').find('ul:visible').slideUp();
+                        $this.siblings('ul').slideDown();
+                    }
+                }
+            });
         }
-      },
-      closeOnContentClick: true,
-      midClick: true
-    });
-  }
+        mobileltn__utilizeMenu();
+
+        /* --------------------------------------------------------
+            3. Mega Menu
+        --------------------------------------------------------- */
+        $('.mega-menu').each(function(){
+            if($(this).children('li').length){
+                var ulChildren = $(this).children('li').length;
+                $(this).addClass('column-'+ulChildren)
+            }
+        });
+        
+
+        /* Remove Attribute( href ) from sub-menu title in mega-menu */
+        /*
+        $('.mega-menu > li > a').removeAttr('href');
+        */
 
 
-  // Search Bar show & hide
-  $(document).on('click', '.search-icon', function () {
-    $(".search-input-area").addClass("show");
-  });
-  $(document).on('click', '.search-input-area input', function () {
-    $(".search-input-area").addClass("show");
-  });
-  $(document).on('click', '.search-input-inner before', function () {
-    $(".search-input-area").addClass("show");
-  });
-  $('html').click(function (e) {
-    if (!$(e.target).hasClass('show')) {
-      $(".search-input-area").removeClass("show");
-    }
-    $(document).on('click', '.search-close-icon', function () {
-      $(".search-input-area").removeClass("show");
-    });
-  });
+        /* Mega Munu  */
+        /* $(".mega-menu").parent().css({"position": "inherit"}); */
+        $(".mega-menu").parent().addClass("mega-menu-parent");
+        
 
+        /* Add space for Elementor Menu Anchor link */
+        $( window ).on( 'elementor/frontend/init', function() {
+            elementorFrontend.hooks.addFilter( 'frontend/handlers/menu_anchor/scroll_top_distance', function( scrollTop ) {
+                return scrollTop - 75;
+            });
+        });
 
-  // Cart Bar show & hide
-  $(document).on('click', '.cart-icon', function () {
-    $(".cart-bar").addClass("show");
-    $(".anywere").addClass("bgshow");
-  });
-  $(document).on('click', '.close-cart', function () {
-    $(".cart-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-  });
-  $(document).on('click', '.anywere', function () {
-    $(".cart-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-  });
+        /* --------------------------------------------------------
+            3-2. Category Menu
+        --------------------------------------------------------- */
 
+        $('.ltn__category-menu-title').on('click', function(){
+            $('.ltn__category-menu-toggle').slideToggle(500);
+        });	
 
-  $(function () {
-    var header = $(".start-style");
-    $(window).scroll(function () {
-      var scroll = $(window).scrollTop();
+        /* Category Menu More Item show */
+        $('.ltn__category-menu-more-item-parent').on('click', function(){
+            $('.ltn__category-menu-more-item-child').slideToggle();
+            $(this).toggleClass('rx-change');
 
-      if (scroll >= 10) {
-        header.removeClass('start-style').addClass("scroll-on");
-      } else {
-        header.removeClass("scroll-on").addClass('start-style');
-      }
-    });
-  });
+        });
 
-  //Animation
-  $(document).ready(function () {
-    $('body.hero-anime').removeClass('hero-anime');
-  });
+        /* Category Submenu Column Count */
+        $('.ltn__category-submenu').each(function(){
+            if($(this).children('li').length){
+                var ulChildren = $(this).children('li').length;
+                $(this).addClass('ltn__category-column-no-'+ulChildren)
+            }
+        });
 
-  //Menu On Hover
-  $('body').on('mouseenter mouseleave', '.nav-item', function (e) {
-    if ($(window).width() > 750) {
-      var _d = $(e.target).closest('.nav-item');
-      _d.addClass('show');
-      setTimeout(function () {
-        _d[_d.is(':hover') ? 'addClass' : 'removeClass']('show');
-      }, 1);
-    }
-  });
-  //Switch light/dark
-
-  $("#switch").on('click', function () {
-    if ($("body").hasClass("dark")) {
-      $("body").removeClass("dark");
-      $("#switch").removeClass("switched");
-    } else {
-      $("body").addClass("dark");
-      $("#switch").addClass("switched");
-    }
-  });
-
-
-  // Image popup
-  $(document).ready(function () {
-    $('.image-popup-vertical-fit').magnificPopup({
-      type: 'image',
-      mainClass: 'mfp-with-zoom',
-      gallery: {
-        enabled: true
-      },
-
-      zoom: {
-        enabled: true,
-
-        duration: 300,
-        easing: 'ease-in-out',
-
-        opener: function (openerElement) {
-
-          return openerElement.is('img') ? openerElement : openerElement.find('img');
+        /* Category Menu Responsive */
+        function ltn__CategoryMenuToggle(){
+            $('.ltn__category-menu-toggle .ltn__category-menu-drop > a').on('click', function(){
+            if($(window).width() < 991){
+                $(this).removeAttr('href');
+                var element = $(this).parent('li');
+                if (element.hasClass('open')) {
+                    element.removeClass('open');
+                    element.find('li').removeClass('open');
+                    element.find('ul').slideUp();
+                }
+                else {
+                    element.addClass('open');
+                    element.children('ul').slideDown();
+                    element.siblings('li').children('ul').slideUp();
+                    element.siblings('li').removeClass('open');
+                    element.siblings('li').find('li').removeClass('open');
+                    element.siblings('li').find('ul').slideUp();
+                }
+            }
+            });
+            $('.ltn__category-menu-toggle .ltn__category-menu-drop > a').append('<span class="expand"></span>');
         }
-      }
+        ltn__CategoryMenuToggle();
+
+
+        /* ---------------------------------------------------------
+            4. One Page Navigation ( jQuery Easing Plugin )
+        --------------------------------------------------------- */
+        // jQuery for page scrolling feature - requires jQuery Easing plugin
+        $(function() {
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+
+
+        /* --------------------------------------------------------
+            5. Toogle Search
+        -------------------------------------------------------- */
+        // Handle click on toggle search button
+        $('.header-search-1').on('click', function() {
+            $('.header-search-1, .header-search-1-form').toggleClass('search-open');
+            return false;
+        });
+
+
+        /* ---------------------------------------------------------
+            6. Current Year Copyright area
+        --------------------------------------------------------- */
+        $(".current-year").text((new Date).getFullYear());
+
+
+        /* ---------------------------------------------------------
+            7. Background Image
+        --------------------------------------------------------- */
+        var $backgroundImage = $('.bg-image, .bg-image-top');
+        $backgroundImage.each(function() {
+            var $this = $(this),
+                $bgImage = $this.data('bs-bg');
+            $this.css('background-image', 'url('+$bgImage+')');
+        });
+
+
+        /* ---------------------------------------------------------
+            8. wow js init
+        --------------------------------------------------------- */
+        new WOW().init();
+
+
+        /* ---------------------------------------------------------
+            9. Tooltip
+        --------------------------------------------------------- */
+        $('[data-bs-toggle="tooltip"]').tooltip();
+
+
+        /* --------------------------------------------------------
+            10. Nice Select
+        --------------------------------------------------------- */
+        $('select').niceSelect();
+
+        
+        /* --------------------------------------------------------
+            11. Default active and hover item active
+        --------------------------------------------------------- */
+        var ltn__active_item = $('.ltn__feature-item-6, .ltn__our-journey-wrap ul li, .ltn__pricing-plan-item')
+        ltn__active_item.mouseover(function() {
+            ltn__active_item.removeClass('active');
+            $(this).addClass('active');
+        });
+
+        /* --------------------------------------------------------
+            12. Product Details Page
+        --------------------------------------------------------- */
+        $('.ltn__shop-details-large-img').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.ltn__shop-details-small-img'
+        });
+        $('.ltn__shop-details-small-img').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.ltn__shop-details-large-img',
+            dots: false,
+            arrows: true,
+            focusOnSelect: true,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+                        
+        /* --------------------------------------------------------
+            13. Isotope Gallery Active  ( Gallery / Portfolio )
+        -------------------------------------------------------- */
+        var $ltnGalleryActive = $('.ltn__gallery-active'),
+            $ltnGalleryFilterMenu = $('.ltn__gallery-filter-menu');
+        /*Filter*/
+        $ltnGalleryFilterMenu.on( 'click', 'button, a', function() {
+            var $this = $(this),
+                $filterValue = $this.attr('data-filter');
+            $ltnGalleryFilterMenu.find('button, a').removeClass('active');
+            $this.addClass('active');
+            $ltnGalleryActive.isotope({ filter: $filterValue });
+        });
+        /*Grid*/
+        $ltnGalleryActive.each(function(){
+            var $this = $(this),
+                $galleryFilterItem = '.ltn__gallery-item';
+            $this.imagesLoaded( function() {
+                $this.isotope({
+                    itemSelector: $galleryFilterItem,
+                    percentPosition: true,
+                    masonry: {
+                        columnWidth: '.ltn__gallery-sizer',
+                    }
+                });
+            });
+        });
+
+        /* --------------------------------------------------------
+            14. LightCase jQuery Active
+        --------------------------------------------------------- */
+        $('a[data-rel^=lightcase]').lightcase({
+            transition: 'elastic', /* none, fade, fadeInline, elastic, scrollTop, scrollRight, scrollBottom, scrollLeft, scrollHorizontal and scrollVertical */
+            swipe: true,
+            maxWidth: 1170,
+            maxHeight: 600,
+        });
+
+        /* --------------------------------------------------------
+            15. Slider One Active 
+        --------------------------------------------------------- */
+        $('.ltn__slide-one-active').slick({
+            autoplay: false,
+            autoplaySpeed: 2000,
+            arrows: true,
+            dots: true,
+            fade: true,
+            cssEase: 'linear',
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ]
+        }).on('afterChange', function(){
+            new WOW().init();
+        });
+        /* --------------------------------------------------------
+            15-2. Slider Active 2
+        --------------------------------------------------------- */
+        $('.ltn__slide-active-2').slick({
+            autoplay: false,
+            autoplaySpeed: 2000,
+            arrows: false,
+            dots: true,
+            fade: true,
+            cssEase: 'linear',
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                    }
+                }
+            ]
+        }).on('afterChange', function(){
+            new WOW().init();
+        });
+
+        
+        /*----------------------
+            Slider 11 active
+        -----------------------*/
+        $('.ltn__slider-11-active').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            $('.ltn__slider-11-pagination-count .count').text('0'+i);
+            $('.ltn__slider-11-pagination-count .total').text('0' + slick.slideCount);
+
+            $('.ltn__slider-11-slide-item-count .count').text('0'+i);
+            $('.ltn__slider-11-slide-item-count .total').text('/0' + slick.slideCount);
+            new WOW().init();
+        }).slick({
+            dots: false, /* slider left or right side pagination count with line */
+            arrows: false, /* slider arrow  */
+            appendDots: '.ltn__slider-11-pagination-count',
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 10000,
+            speed: 500,
+            asNavFor: '.ltn__slider-11-img-slide-arrow-active',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        arrows: false,
+                        dots: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        $('.ltn__slider-11-img-slide-arrow-active').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            centerMode: false,
+            centerPadding: '0px',
+            asNavFor: '.ltn__slider-11-active',
+            dots: false, /* image slide dots */
+            arrows: false, /* image slide arrow */
+            centerMode: true,
+            focusOnSelect: true,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        arrows: false,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: true,
+                        dots: false
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        arrows: true,
+                        dots: false,
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            16-1. Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__product-slider-one-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            16-1. Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__product-slider-item-three-active').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            16-2. Product Slider Item Four
+        --------------------------------------------------------- */
+        $('.ltn__product-slider-item-four-active').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            16-2. Product Slider Item Four
+        --------------------------------------------------------- */
+        $('.ltn__product-slider-item-four-active-full-width').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1800,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            16-3. Related Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__related-product-slider-one-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            ## Related Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__related-product-slider-two-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            ## Related Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__popular-product-widget-active').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+        });
+
+        /* --------------------------------------------------------
+            17. Tab Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__tab-product-slider-one-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        /* --------------------------------------------------------
+            17. Small Product Slider One
+        --------------------------------------------------------- */
+        $('.ltn__small-product-slider-active').slick({
+            arrows: false,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            18. Blog Slider One
+        --------------------------------------------------------- */
+        $('.ltn__blog-slider-one-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 575,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            19. Testimonial Slider - 1
+        --------------------------------------------------------- */
+        $('.ltn__testimonial-slider-active').slick({
+            arrows: true,
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            20. Testimonial Slider - 2
+        --------------------------------------------------------- */
+        $('.ltn__testimonial-slider-2-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            21. Testimonial Slider - 3
+        --------------------------------------------------------- */
+        $('.ltn__testimonial-slider-3-active').slick({
+            arrows: true,
+            centerMode: true,
+            centerPadding: '80px',
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            21. Testimonial Slider - 5
+        --------------------------------------------------------- */
+        $('.ltn__testimonial-slider-5-active').slick({
+            arrows: true,
+            centerMode: false,
+            centerPadding: '80px',
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+        
+        /* --------------------------------------------------------
+            21. Testimonial Slider - 6
+        --------------------------------------------------------- */
+        $('.ltn__testimonial-slider-6-active').slick({
+            arrows: true,
+            dots: false,
+            centerMode: false,
+            centerPadding: '80px',
+            infinite: true,
+            speed: 300,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        centerMode: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            22. Category Slider
+        --------------------------------------------------------- */
+        $('.ltn__category-slider-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 375,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            22. Category Slider
+        --------------------------------------------------------- */
+        $('.ltn__category-slider-active-six').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 7,
+            slidesToScroll: 3,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 375,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            23. Image Slide  - 1 (Screenshot) 
+        --------------------------------------------------------- */
+        $('.ltn__image-slider-1-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0px',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            24. Image Slide - 2
+        --------------------------------------------------------- */
+        $('.ltn__image-slider-2-active').slick({
+            rtl: false,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '80px',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        centerPadding: '50px'
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '50px'
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            25. Image Slide - 3
+        --------------------------------------------------------- */
+        $('.ltn__image-slider-3-active').slick({
+            rtl: false,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0px',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            26. Image Slide - 4 
+        --------------------------------------------------------- */
+        $('.ltn__image-slider-4-active').slick({
+            rtl: false,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '0px',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            ## Image Slide - 5
+        --------------------------------------------------------- */
+        $('.ltn__image-slider-5-active').slick({
+            rtl: false,
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '450px',
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '250px',
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '200px',
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                        centerPadding: '150px',
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                        centerPadding: '0px',
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: false,
+                        centerPadding: '0px',
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            27. Brand Logo
+        --------------------------------------------------------- */
+        if($('.ltn__brand-logo-active').length){
+            $('.ltn__brand-logo-active').slick({
+                rtl: false,
+                arrows: false,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 580,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        };
+
+
+        /* --------------------------------------------------------
+            # upcoming-project-slider-1
+        --------------------------------------------------------- */
+        $('.ltn__upcoming-project-slider-1-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+
+        /* --------------------------------------------------------
+            # ltn__search-by-place-slider-1-active
+        --------------------------------------------------------- */
+        $('.ltn__search-by-place-slider-1-active').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        arrows: false,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        arrows: false,
+                        dots: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        /* --------------------------------------------------------
+            28. Blog Gallery (Blog Page )
+        --------------------------------------------------------- */
+        if($('.ltn__blog-gallery-active').length){
+            $('.ltn__blog-gallery-active').slick({
+                rtl: false,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>'
+            });
+        };
+
+        /* --------------------------------------------------------
+            29. Countdown
+        --------------------------------------------------------- */
+        $('[data-countdown]').each(function () {
+
+            var $this = $(this),
+                finalDate = $(this).data('countdown');
+            if (!$this.hasClass('countdown-full-format')) {
+                $this.countdown(finalDate, function (event) {
+                    $this.html(event.strftime('<div class="single"><h1>%D</h1><p>Days</p></div> <div class="single"><h1>%H</h1><p>Hrs</p></div> <div class="single"><h1>%M</h1><p>Mins</p></div> <div class="single"><h1>%S</h1><p>Secs</p></div>'));
+                });
+            } else {
+                $this.countdown(finalDate, function (event) {
+                    $this.html(event.strftime('<div class="single"><h1>%Y</h1><p>Years</p></div> <div class="single"><h1>%m</h1><p>Months</p></div> <div class="single"><h1>%W</h1><p>Weeks</p></div> <div class="single"><h1>%d</h1><p>Days</p></div> <div class="single"><h1>%H</h1><p>Hrs</p></div> <div class="single"><h1>%M</h1><p>Mins</p></div> <div class="single"><h1>%S</h1><p>Secs</p></div>'));
+                });
+            }
+
+        });
+
+
+        /* --------------------------------------------------------
+            30. Counter Up
+        --------------------------------------------------------- */
+        // $('.ltn__counter').counterUp();
+
+        $('.counter').counterUp({
+          delay: 10,
+          time: 2000
+        });
+        $('.counter').addClass('animated fadeInDownBig');  
+        $('h3').addClass('animated fadeIn');
+        
+
+        /* --------------------------------------------------------
+            31. Instagram Feed
+        --------------------------------------------------------- */
+        if($('.ltn__instafeed').length){
+            $.instagramFeed({
+                'username': 'envato',
+                'container': ".ltn__instafeed",
+                'display_profile': false,
+                'display_biography': false,
+                'display_gallery': true,
+                'styling': false,
+                'items': 12,
+                "image_size": "600", /* 320 */
+            });
+            $('.ltn__instafeed').on("DOMNodeInserted", function (e) {
+                if (e.target.className == 'instagram_gallery') {
+                    $('.ltn__instafeed-slider-2 .' + e.target.className).slick({
+                        infinite: true,
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                        prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                        nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                        responsive: [{
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        }, {
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }]
+                    })
+                    $('.ltn__instafeed-slider-1 .' + e.target.className).slick({
+                        infinite: true,
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                        nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                        responsive: [{
+                            breakpoint: 119,
+                            settings: {
+                                slidesToShow: 4
+                            }
+                        }, {
+                            breakpoint: 991,
+                            settings: {
+                                slidesToShow: 3
+                            }
+                        }, {
+                            breakpoint: 767,
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        }, {
+                            breakpoint: 575,
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }]
+                    });
+                }
+            });
+        };
+
+
+        /* ---------------------------------------------------------
+            32. Price Slider
+        --------------------------------------------------------- */
+        $( ".slider-range" ).slider({
+            range: true,
+            min: 50,
+            max: 5000,
+            values: [ 50, 1500 ],
+            slide: function( event, ui ) {
+                $( ".amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+            }
+        });
+        $( ".amount" ).val( "$" + $( ".slider-range" ).slider( "values", 0 ) +
+        " - $" + $( ".slider-range" ).slider( "values", 1 ) ); 
+
+
+        /* --------------------------------------------------------
+            33. Quantity plus minus
+        -------------------------------------------------------- */
+        $(".cart-plus-minus").prepend('<div class="dec qtybutton">-</div>');
+        $(".cart-plus-minus").append('<div class="inc qtybutton">+</div>');
+        $(".qtybutton").on("click", function() {
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+            if ($button.text() == "+") {
+                var newVal = parseFloat(oldValue) + 1;
+            } 
+            else {
+                if (oldValue > 0) {
+                    var newVal = parseFloat(oldValue) - 1;
+                } 
+                else {
+                    newVal = 0;
+                }
+            }
+            $button.parent().find("input").val(newVal);
+        });
+
+
+	    /* --------------------------------------------------------
+            34. scrollUp active
+        -------------------------------------------------------- */
+        $.scrollUp({
+            scrollText: '<i class="fa fa-angle-up"></i>',
+            easingType: 'linear',
+            scrollSpeed: 900,
+            animation: 'fade'
+        });
+
+
+	    /* --------------------------------------------------------
+            35. Parallax active ( About Section  )
+        -------------------------------------------------------- */
+        /* 
+        > 1 page e 2 ta call korle 1 ta kaj kore 
+        */
+        if($('.ltn__parallax-effect-active').length){
+            var scene = $('.ltn__parallax-effect-active').get(0);
+            var parallaxInstance = new Parallax(scene);
+        }
+
+
+	    /* --------------------------------------------------------
+            36. Testimonial Slider 4
+        -------------------------------------------------------- */
+        var ltn__testimonial_quote_slider = $('.ltn__testimonial-slider-4-active');
+        ltn__testimonial_quote_slider.slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            dots: false,
+            arrows: true,
+            fade: true,
+            speed: 1500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+            nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    }
+                },
+                {
+                    breakpoint: 580,
+                    settings: {
+                        autoplay: false,
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: false,
+                    }
+                }
+            ]
+        });
+
+        /* have to write code for bind it with static images */
+        ltn__testimonial_quote_slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            var liIndex = nextSlide + 1;
+            var slideImageliIndex = (slick.slideCount == liIndex) ? liIndex - 1 : liIndex;
+            var cart = $('.ltn__testimonial-slider-4 .slick-slide[data-slick-index="' + slideImageliIndex + '"]').find('.ltn__testimonial-image');
+            var imgtodrag = $('.ltn__testimonial-quote-menu li:nth-child(' + liIndex + ')').find("img").eq(0);
+            if (imgtodrag) {
+                AnimateTestimonialImage(imgtodrag, cart)
+            }
+        });
+
+        /* have to write code for bind static image to slider accordion to slide index of images */
+        $(document).on('click', '.ltn__testimonial-quote-menu li', function (e) {
+            var el = $(this);
+            var elIndex = el.prevAll().length;
+            ltn__testimonial_quote_slider.slick('slickGoTo', elIndex);
+            var cart = $('.ltn__testimonial-slider-4 .slick-slide[data-slick-index="' + elIndex + '"]').find('.ltn__testimonial-image');
+            var imgtodrag = el.find("img").eq(0);
+            if (imgtodrag) {
+                AnimateTestimonialImage(imgtodrag, cart)
+            }
+
+        });
+
+
+
+        function AnimateTestimonialImage(imgtodrag, cart) {
+            var imgclone = imgtodrag.clone().offset({
+                top: imgtodrag.offset().top,
+                left: imgtodrag.offset().left
+            }).css({
+                'opacity': '0.5',
+                'position': 'absolute',
+                'height': '130px',
+                'width': '130px',
+                'z-index': '100'
+            }).addClass('quote-animated-image').appendTo($('body')).animate({
+                'top': cart.offset().top + 10,
+                'left': cart.offset().left + 10,
+                'width': 130,
+                'height': 130
+            }, 300);
+
+
+            imgclone.animate({
+                'visibility': 'hidden',
+                'opacity': '0'
+            }, function () {
+                $(this).remove()
+            });
+        }
+
+
+        /* --------------------------------------------------------
+            Newsletter Popup
+        -------------------------------------------------------- */
+        $('#ltn__newsletter_popup').modal('show');
+
+
+        /* --------------------------------------------------------
+            Progress Bar Round
+        -------------------------------------------------------- */
+        $(function() {
+            $(".progress").each(function() {
+
+                var value = $(this).attr('data-value');
+                var left = $(this).find('.progress-left .progress-bar');
+                var right = $(this).find('.progress-right .progress-bar');
+
+                if (value > 0) {
+                    if (value <= 50) {
+                        right.css('transform', 'rotate(' + percentageToDegrees(value) + 'deg)')
+                    } else {
+                        right.css('transform', 'rotate(180deg)')
+                        left.css('transform', 'rotate(' + percentageToDegrees(value - 50) + 'deg)')
+                    }
+                }
+
+            })
+
+            function percentageToDegrees(percentage) {
+            return percentage / 100 * 360
+            }
+        });
+
+
+
+
     });
-  });
 
 
-  // Sidebar open & close
-  $('.hamburger').on('click', function () {
-    $(".hamburger").toggleClass("active");
-  });
-
-  $('.hamburger').on('click', function () {
-    $(".slide-bar").toggleClass("show");
-    $(".anywere").addClass("bgshow");
-    $(".hamburger").addClass("move");
-  });
-
-  $('.mobile-hamburger').click('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger").addClass("move");
-  });
-
-  $('.anywere').on('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger").removeClass("active");
-  });
-
-  $('.action-item').on('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger").removeClass("active");
-  });
-
-  $(function () {
-    $('.toggle-menu').on('focus', function () {
-      $('.rts-menu').toggleClass('display');
-    });
-  });
-  $('.hamburger-1').on('click', function () {
-    $(".hamburger-1").toggleClass("active");
-  });
-
-  $('.hamburger-1').on('click', function () {
-    $(".slide-bar").toggleClass("show");
-    $(".anywere").addClass("bgshow");
-    $(".hamburger-1").addClass("move");
-  });
-
-  $('.mobile-hamburger-1').click('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger-1").addClass("move");
-  });
-
-  $('.anywere').on('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger-1").removeClass("active");
-  });
-
-  $('.action-item').on('click', function () {
-    $(".slide-bar").removeClass("show");
-    $(".anywere").removeClass("bgshow");
-    $(".hamburger-1").removeClass("active");
-  });
-
-  $(function () {
-    $('.toggle-menu').on('focus', function () {
-      $('.rts-menu').toggleClass('display');
-    });
-  });
-
-
-  /*------------------------------------
-		Mobile Menu
-	--------------------------------------*/
-
-  $('#mobile-menu-active').metisMenu();
-
-  $('#mobile-menu-active .has-dropdown > a').on('click', function (e) {
-    e.preventDefault();
-  });
-
-
-  $(".hamburger-menu > a").on("click", function (e) {
-    e.preventDefault();
-    $(".slide-bar").toggleClass("show");
-    $("body").addClass("on-side");
-    $('.body-overlay').addClass('active');
-    $(this).addClass('active');
-  });
-
-  /* Search
-  	-------------------------------------------------------*/
-  var $searchWrap = $('.search-wrap');
-  var $navSearch = $('.nav-search');
-  var $searchClose = $('#search-close');
-
-  $('.search-trigger').on('click', function (e) {
-    e.preventDefault();
-    $searchWrap.animate({
-      opacity: 'toggle'
-    }, 500);
-    $navSearch.add($searchClose).addClass("open");
-  });
-
-  $('.search-close').on('click', function (e) {
-    e.preventDefault();
-    $searchWrap.animate({
-      opacity: 'toggle'
-    }, 500);
-    $navSearch.add($searchClose).removeClass("open");
-  });
-
-  function closeSearch() {
-    $searchWrap.fadeOut(200);
-    $navSearch.add($searchClose).removeClass("open");
-  }
-
-  $(document.body).on('click', function (e) {
-    closeSearch();
-  });
-
-  $(".search-trigger, .main-search-input").on('click', function (e) {
-    e.stopPropagation();
-  });
-
-
-  //sticky-menu
-  $(window).on('scroll', function () {
-    var scroll = $(window).scrollTop();
-    if (scroll < 200) {
-      $(".navbar-sticky").removeClass("sticky-menu");
-      $(".navbar-sticky-mobile").removeClass("sticky-menu-mobile");
-    } else {
-      $(".navbar-sticky").addClass("sticky-menu");
-      $(".navbar-sticky-mobile").addClass("sticky-menu-mobile");
-    }
-  });
-
-  // Scroll to top
-  var btn = $('.scroll-top-btn');
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass('jumpTop');
-    } else {
-      btn.removeClass('jumpTop');
-    }
-  });
-
-  btn.on('click', function (e) {
-    e.preventDefault();
-    $('html, body').animate({
-      scrollTop: 0
-    }, '300');
-  });
-
-  $("#nav ul li a[href^='#']").on('click', function (e) {
-    e.preventDefault();
-    var hash = this.hash;
-
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 1000, function () {
-      window.location.hash = hash;
-    });
-  });
-
-  $("#nav div div a[href^='#']").on('click', function (e) {
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 1000, function () {
-      window.location.hash = hash;
-    });
-
-  });
-
-  $("#nav ul li a[href^='#']").on('click', function (e) {
-    e.preventDefault();
-
-    // store hash
-    var hash = this.hash;
-
-    // animate
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 1000, function () {
-      window.location.hash = hash;
-    });
-
-  });
-
-  $("#nav div div a[href^='#']").on('click', function (e) {
-    e.preventDefault();
-    var hash = this.hash;
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 1000, function () {
-      window.location.hash = hash;
-    });
-  });
-
-  // Filter item
-  $(document).on('click', '.filter-btn', function () {
-    var show = $(this).data('show');
-    $(show).removeClass("hide").siblings().addClass("hide");
-  });
-
-  $(document).on('click', '.filter-btn', function () {
-    $(this).addClass('active').siblings().removeClass('active')
-  })
-
-
-
-  // Isotope Filter
-  var $grid = $('.grid').isotope({
-    itemSelector: '.element-item',
-    layoutMode: 'fitRows'
-  });
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function () {
-      var number = $(this).find('.number').text();
-      return parseInt(number, 10) > 50;
-    },
-    // show if name ends with -ium
-    ium: function () {
-      var name = $(this).find('.name').text();
-      return name.match(/ium$/);
-    }
-  };
-  // bind filter button click
-  $('.filter-buttons-group').on('click', 'button', function () {
-    var filterValue = $(this).attr('data-filter');
-    // use filterFn if matches value
-    filterValue = filterFns[filterValue] || filterValue;
-    $grid.isotope({
-      filter: filterValue
-    });
-  });
-  // change is-checked class on buttons
-  $('.button-group').each(function (i, buttonGroup) {
-    var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on('click', 'button', function () {
-      $buttonGroup.find('.checked').removeClass('checked');
-      $(this).addClass('checked');
-    });
-  });
-
-  $(function () {
-    $(".button").on("click", function () {
-      var $button = $(this);
-      var $parent = $button.parent();
-      var oldValue = $parent.find('.input').val();
-
-      if ($button.text() == "+") {
-        var newVal = parseFloat(oldValue) + 1;
-      } else {
-        // Don't allow decrementing below zero
-        if (oldValue > 1) {
-          var newVal = parseFloat(oldValue) - 1;
+    /* --------------------------------------------------------
+        36. Header menu sticky
+    -------------------------------------------------------- */
+    $(window).on('scroll',function() {    
+        var scroll = $(window).scrollTop();
+        if (scroll < 445) {
+            $(".ltn__header-sticky").removeClass("sticky-active");
         } else {
-          newVal = 1;
+            $(".ltn__header-sticky").addClass("sticky-active");
         }
-      }
-      $parent.find('a.add-to-cart').attr('data-quantity', newVal);
-      $parent.find('.input').val(newVal);
-    });
-  });
-  var countdown = $('.countdown');
-
-  if (countdown.length) {
-
-    $(function () {
-      const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-      let today = new Date(),
-        dd = String(today.getDate()).padStart(2, "0"),
-        mm = String(today.getMonth() + 1).padStart(2, "0"),
-        yyyy = today.getFullYear(),
-        nextYear = yyyy + 1,
-        dayMonth = "09/30/",
-        counterday = dayMonth + yyyy;
-
-      today = mm + "/" + dd + "/" + yyyy;
-      if (today > counterday) {
-        counterday = dayMonth + nextYear;
-      }
-      //end
-
-      const countDown = new Date(counterday).getTime(),
-        x = setInterval(function () {
-
-          const now = new Date().getTime(),
-            distance = countDown - now;
-
-          document.getElementById("days").innerText = Math.floor(distance / (day)),
-            document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-            document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-            document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        }, 0)
-    }());
-  }
+    }); 
 
 
-  // init Isotope
-  var $grid = $('.fill').isotope({
-    itemSelector: '.element-item',
-    layoutMode: 'fitRows'
-  });
-  // filter functions
-  var filterFns = {
-    // show if number is greater than 50
-    numberGreaterThan50: function () {
-      var number = $(this).find('.number').text();
-      return parseInt(number, 10) > 50;
-    },
-    // show if name ends with -ium
-    ium: function () {
-      var name = $(this).find('.name').text();
-      return name.match(/ium$/);
-    }
-  };
-  // bind filter on select change
-  $('.filters-select').on('change', function () {
-    // get filter value from option value
-    var filterValue = this.value;
-    // use filterFn if matches value
-    filterValue = filterFns[filterValue] || filterValue;
-    $grid.isotope({
-      filter: filterValue
-    });
-  });
+    $(window).on('load',function(){
+        /*-----------------
+            preloader
+        ------------------*/
+        if($('#preloader').length){
+            var preLoder = $("#preloader");
+            preLoder.fadeOut(1000);
 
-  $('.custom-select').each(function () {
-    var $this = $(this),
-      numberOfOptions = $(this).children('option').length;
-
-    $this.addClass('select-hidden');
-    $this.wrap('<div class="select"></div>');
-    $this.after('<div class="select-styled"></div>');
-
-    var $styledSelect = $this.next('div.select-styled');
-    $styledSelect.text($this.children('option').eq(0).text());
-
-    var $list = $('<ul />', {
-      'class': 'select-options'
-    }).insertAfter($styledSelect);
-
-    for (var i = 0; i < numberOfOptions; i++) {
-      $('<li />', {
-        text: $this.children('option').eq(i).text(),
-        rel: $this.children('option').eq(i).val()
-      }).appendTo($list);
-    }
-
-    var $listItems = $list.children('li');
+        };
 
 
-    $styledSelect.on('click', function (e) {
-      e.stopPropagation();
-      $('div.select-styled.active').not(this).each(function () {
-        $(this).removeClass('active').next('ul.select-options').hide();
-      });
-      $(this).toggleClass('active').next('ul.select-options').toggle();
     });
 
-    $listItems.on('click', function (e) {
-      e.stopPropagation();
-      $styledSelect.text($(this).text()).removeClass('active');
-      $this.val($(this).attr('rel'));
-      $list.hide();
-    });
 
-    $(document).click(function () {
-      $styledSelect.removeClass('active');
-      $list.hide();
-    });
-
-  });
-  $('.custom-select2').each(function () {
-    var $this = $(this),
-      numberOfOptions = $(this).children('option').length;
-
-    $this.addClass('select-hidden');
-    $this.wrap('<div class="select2"></div>');
-    $this.after('<div class="select-styled"></div>');
-
-    var $styledSelect = $this.next('div.select-styled');
-    $styledSelect.text($this.children('option').eq(0).text());
-
-    var $list = $('<ul />', {
-      'class': 'select-options'
-    }).insertAfter($styledSelect);
-
-    for (var i = 0; i < numberOfOptions; i++) {
-      $('<li />', {
-        text: $this.children('option').eq(i).text(),
-        rel: $this.children('option').eq(i).val()
-      }).appendTo($list);
-    }
-
-    var $listItems = $list.children('li');
-
-
-    $styledSelect.on('click', function (e) {
-      e.stopPropagation();
-      $('div.select-styled.active').not(this).each(function () {
-        $(this).removeClass('active').next('ul.select-options').hide();
-      });
-      $(this).toggleClass('active').next('ul.select-options').toggle();
-    });
-
-    $listItems.on('click', function (e) {
-      e.stopPropagation();
-      $styledSelect.text($(this).text()).removeClass('active');
-      $this.val($(this).attr('rel'));
-      $list.hide();
-    });
-
-    $(document).click(function () {
-      $styledSelect.removeClass('active');
-      $list.hide();
-    });
-
-  });
-
-  var cookies = document.cookie.split(';')
-    .reduce((res, c) => {
-      const [key, val] = c.trim().split('=').map(decodeURIComponent)
-      return Object.assign(res, {
-        [key]: val
-      })
-    }, {});
-
-
-  $(".header-topbar5").on('click', function () {
-    $(".header-topbar5").addClass("close");
-  });
-
-  $(".category-item-inner").on('click', function () {
-    var cateItem = $(this).parent(".category-item")
-    cateItem.toggleClass('show');
-    cateItem.siblings(".category-item").removeClass('show');
-  });
-
-
-  $(".color-item").one('click', function () {
-    $(this).toggleClass('selected');
-
-  });
-
-
-  $(".coupon-click").on('click', function () {
-    $(".coupon-input-area").toggleClass('show');
-  });
-
-
-  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-  var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-    return new bootstrap.Tooltip(tooltipTriggerEl)
-  })
-
-
-  // Newsletter popup
-  $(document).ready(function () {
-    //function showpanel() {
-    //  $(".anywere-home").addClass("bgshow");
-    //  $(".rts-newsletter-popup").addClass("popup");
-    //}
-    //setTimeout(showpanel, 4000)
-  });
-
-  $(".anywere-home").on('click', function () {
-    $(".rts-newsletter-popup").removeClass("popup")
-    $(".anywere-home").removeClass("bgshow")
-  });
-  $(".newsletter-close-btn").on('click', function () {
-    $(".rts-newsletter-popup").removeClass("popup")
-    $(".anywere-home").removeClass("bgshow")
-  });
-
-  // Product details popup
-  $(".product-details-popup-btn").on('click', function () {
-    $(".product-details-popup-wrapper").addClass("popup")
-    $(".anywere").addClass("bgshow")
-  });
-  $(".product-bottom-action .view-btn").on('click', function () {
-    $(".product-details-popup-wrapper").addClass("popup")
-    $(".anywere").addClass("bgshow")
-  });
-  $(".product-details-popup-wrapper .cart-edit").on('click', function () {
-    $(".product-details-popup-wrapper").addClass("popup")
-    $(".anywere-home").addClass("bgshow")
-  });
-
-  $(".product-details-close-btn").on('click', function () {
-    $(".product-details-popup-wrapper").removeClass("popup")
-    $(".anywere").removeClass("bgshow")
-  });
-  $(".anywere").on('click', function () {
-    $(".product-details-popup-wrapper").removeClass("popup")
-    $(".anywere").removeClass("bgshow")
-  });
-
-
+  
 })(jQuery);
-
-function zoom(e) {
-  var zoomer = e.currentTarget;
-  e.offsetX ? offsetX = e.offsetX : offsetX = e.touches[0].pageX
-  e.offsetY ? offsetY = e.offsetY : offsetX = e.touches[0].pageX
-  x = offsetX / zoomer.offsetWidth * 100
-  y = offsetY / zoomer.offsetHeight * 100
-  zoomer.style.backgroundPosition = x + '% ' + y + '%';
-}
-
-var nstSlider = $('.nstSlider');
-
-if (nstSlider.length) {
-  $('.nstSlider').nstSlider({
-    "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
-    "value_bar_selector": ".bar",
-    "value_changed_callback": function (cause, leftValue, rightValue) {
-      $(this).parent().find('.leftLabel').text(leftValue);
-      $(this).parent().find('.rightLabel').text(rightValue);
-    }
-  });
-}

@@ -53,8 +53,8 @@ class Migration(migrations.Migration):
                 ('statue', models.CharField(max_length=32, verbose_name='状态')),
             ],
             options={
-                'verbose_name': '书籍表',
-                'verbose_name_plural': '书籍表',
+                'verbose_name': '药品表',
+                'verbose_name_plural': '药品表',
             },
         ),
         migrations.CreateModel(
@@ -64,8 +64,8 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=32, verbose_name='分类名')),
             ],
             options={
-                'verbose_name': '书籍分类表',
-                'verbose_name_plural': '书籍分类表',
+                'verbose_name': '药品分类表',
+                'verbose_name_plural': '药品分类表',
             },
         ),
         migrations.CreateModel(
@@ -92,8 +92,8 @@ class Migration(migrations.Migration):
                 ('time', models.DateTimeField(verbose_name='时间')),
             ],
             options={
-                'verbose_name': '书籍收藏表',
-                'verbose_name_plural': '书籍收藏表',
+                'verbose_name': '药品收藏表',
+                'verbose_name_plural': '药品收藏表',
             },
         ),
         migrations.CreateModel(
@@ -106,8 +106,8 @@ class Migration(migrations.Migration):
                 ('time', models.DateTimeField(verbose_name='时间')),
             ],
             options={
-                'verbose_name': '书籍评论表',
-                'verbose_name_plural': '书籍评论表',
+                'verbose_name': '药品评论表',
+                'verbose_name_plural': '药品评论表',
             },
         ),
         migrations.CreateModel(

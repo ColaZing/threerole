@@ -9,87 +9,91 @@ class User(models.Model):
     password = models.CharField(max_length=32, verbose_name='密码')
     email = models.EmailField(verbose_name='邮箱')
     phone = models.CharField(max_length=11, verbose_name='手机号')
+    role = models.CharField(max_length=32, verbose_name='角色')
 
     class Meta:
-        verbose_name = '用户表'
+        verbose_name = '用户管理'
         verbose_name_plural = verbose_name
 
 
-# 书籍表
+# 水果表
 class Book(models.Model):
-    name = models.CharField(max_length=32, verbose_name='书名')
-    author = models.CharField(max_length=32, verbose_name='作者')
+    name = models.CharField(max_length=32, verbose_name='水果名')
+    author = models.CharField(max_length=32, verbose_name='产地')
     price = models.CharField(max_length=32, verbose_name='价格')
-    publish = models.CharField(max_length=32, verbose_name='出版社')
-    publish_date = models.DateField(verbose_name='出版日期')
-    cover = models.CharField(max_length=128, verbose_name='封面')
+    publish_date = models.DateField(verbose_name='生产日期')
+    cover = models.FileField(upload_to='templates/assets', verbose_name='封面')
     desc = models.TextField(verbose_name='简介')
     category = models.CharField(max_length=32, verbose_name='分类')
     sales = models.IntegerField(verbose_name='销量')
     statue = models.CharField(max_length=32, verbose_name='状态')
+    sjuser = models.CharField(max_length=32, verbose_name='用户名')
 
     class Meta:
-        verbose_name = '书籍表'
+        verbose_name = '水果管理'
         verbose_name_plural = verbose_name
 
 
-# 书籍分类表
+# 水果分类表
 class BookCategory(models.Model):
     name = models.CharField(max_length=32, verbose_name='分类名')
 
     class Meta:
-        verbose_name = '书籍分类表'
+        verbose_name = '水果分类'
         verbose_name_plural = verbose_name
 
 
 # 购物车表
 class Cart(models.Model):
     user = models.CharField(max_length=32, verbose_name='用户名')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     cover = models.CharField(max_length=128, verbose_name='封面')
     price = models.CharField(max_length=32, verbose_name='价格')
     count = models.IntegerField(verbose_name='数量')
 
     class Meta:
-        verbose_name = '购物车表'
+        verbose_name = '购物车管理'
         verbose_name_plural = verbose_name
 
 
 # 订单表
 class Order(models.Model):
     user = models.CharField(max_length=32, verbose_name='用户名')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     count = models.IntegerField(verbose_name='数量')
     price = models.CharField(max_length=32, verbose_name='价格')
     status = models.CharField(max_length=32, verbose_name='状态')
+    address = models.CharField(max_length=128, verbose_name='收货地址')
+    phone = models.CharField(max_length=11, verbose_name='手机号')
+    sjuser = models.CharField(max_length=32, verbose_name='批发商名')
     # ordertime只取日期，不取时间
     ordertime = models.DateField(verbose_name='下单时间')
 
     class Meta:
-        verbose_name = '订单表'
+        verbose_name = '订单管理'
         verbose_name_plural = verbose_name
 
 
-# 书籍评论表
+# 水果评论表
 class Comment(models.Model):
     user = models.CharField(max_length=32, verbose_name='用户名')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     content = models.TextField(verbose_name='内容')
     time = models.DateTimeField(verbose_name='时间')
 
     class Meta:
-        verbose_name = '书籍评论表'
+        verbose_name = '水果评论'
         verbose_name_plural = verbose_name
 
 
-# 书籍收藏表
+# 水果收藏表
 class Collection(models.Model):
     user = models.CharField(max_length=32, verbose_name='用户名')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     time = models.DateTimeField(verbose_name='时间')
 
     class Meta:
-        verbose_name = '书籍收藏表'
+        verbose_name = '水果收藏表'
         verbose_name_plural = verbose_name
 
 
@@ -99,7 +103,7 @@ class Banner(models.Model):
     image2 = models.CharField(max_length=128, verbose_name='图片2')
 
     class Meta:
-        verbose_name = '轮播图表'
+        verbose_name = '轮播图管理'
         verbose_name_plural = verbose_name
 
 
@@ -119,7 +123,7 @@ class Address(models.Model):
 class Coupon(models.Model):
     user = models.CharField(max_length=32, verbose_name='用户名')
     price = models.CharField(max_length=32, verbose_name='价格')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     time = models.DateTimeField(verbose_name='时间')
 
     class Meta:
@@ -131,7 +135,7 @@ class Coupon(models.Model):
 class CouponCode(models.Model):
     code = models.CharField(max_length=32, verbose_name='优惠券码')
     price = models.CharField(max_length=32, verbose_name='价格')
-    book = models.CharField(max_length=32, verbose_name='书名')
+    book = models.CharField(max_length=32, verbose_name='水果名')
     time = models.DateTimeField(verbose_name='时间')
 
     class Meta:
